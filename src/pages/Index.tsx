@@ -552,13 +552,13 @@ const Index = () => {
                     <img src={logoAlgonquin} alt="Algonquin College" className="h-9 object-contain" />
                   </a>
                   <a href="https://www.wct-fct.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoWct} alt="WCT" className="h-9 object-contain" />
+                    <img src={logoWct} alt="WCT" className="h-9 object-contain invert" />
                   </a>
                   <a href="https://www.investottawa.ca" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoInvest} alt="Invest Ottawa" className="h-9 object-contain" />
+                    <img src={logoInvest} alt="Invest Ottawa" className="h-9 object-contain invert" />
                   </a>
                   <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoPackt} alt="Packt" className="h-9 object-contain" />
+                    <img src={logoPackt} alt="Packt" className="h-9 object-contain invert" />
                   </a>
                 </div>
             </div>
@@ -568,13 +568,13 @@ const Index = () => {
               <h3 className="text-center text-lg font-bold mb-6">Previous Sponsors</h3>
               <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
                 <a href="https://pragra.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={oldPragra} alt="Pragra" className="h-8 object-contain" />
+                  <img src={oldPragra} alt="Pragra" className="h-8 object-contain invert" />
                 </a>
                 <a href="https://www.liatrio.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoLiatrio} alt="Liatrio" className="h-8 object-contain" />
+                  <img src={logoLiatrio} alt="Liatrio" className="h-8 object-contain invert" />
                 </a>
                 <a href="https://www.teksystems.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoTEK} alt="TEKsystems" className="h-8 object-contain" />
+                  <img src={logoTEK} alt="TEKsystems" className="h-8 object-contain invert" />
                 </a>
                 <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
                   <img src={awsLogo} alt="AWS" className="h-6 invert brightness-0 invert" />
@@ -586,7 +586,7 @@ const Index = () => {
                   <span className="font-bold text-sm">O'Reilly</span>
                 </a>
                 <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoPackt} alt="Packt" className="h-7 object-contain" />
+                  <img src={logoPackt} alt="Packt" className="h-7 object-contain invert" />
                 </a>
                 <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
                   <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-7 object-contain" />
@@ -595,7 +595,7 @@ const Index = () => {
                   <img src={logoAlgonquin} alt="Algonquin College" className="h-7 object-contain" />
                 </a>
                 <a href="https://www.solace.dev" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoSolace} alt="Solace" className="h-7 object-contain" />
+                  <img src={logoSolace} alt="Solace" className="h-7 object-contain invert" />
                 </a>
               </div>
             </div>
