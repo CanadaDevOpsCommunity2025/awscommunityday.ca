@@ -1,8 +1,37 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, ArrowRight, Code2, Users, Trophy, Rocket, Sparkles, Network, Zap, Camera, Eye, Bot, Activity, Heart, Download, Mic } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, Code2, Users, Trophy, Rocket, Sparkles, Network, Zap, Camera, Eye, Bot, Activity, Heart, Download } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import awsLogo from "@/assets/aws-logo.svg";
+import headshotGarima from "@/assets/headshots/Garima_bajpai.png";
+import headshotJohn from "@/assets/headshots/John_Willis_Image20260606195016.png";
+import headshotMary from "@/assets/headshots/AWS Headshot - Anuja Gunaratnam.jpg";
+import headshotCyril from "@/assets/headshots/Cyril-clean (1) - Bandolo.png";
+import headshotAmar from "@/assets/headshots/Linkedin- rougnt-image-Amar - Amarjit Dhillon.png";
+import headshotDheeraj from "@/assets/headshots/dheeraj_vagavolu.jpg";
+import headshotDemario from "@/assets/headshots/demario - DeMario Bell.jpg";
+import headshotGautham from "@/assets/headshots/gautham-home-1k - Gautham Pallapa.jpg";
+import headshotMadeline from "@/assets/headshots/McLendon-Photography-0657 - Maddy V.jpg";
+import headshotSumit from "@/assets/headshots/sumit_profile - sumit soni.png";
+import headshotDaniel from "@/assets/headshots/Summit - Daniel Clement.jpg";
+import headshotWali from "@/assets/headshots/Wali-ProfilePhoto - Md Waliullah.png";
+import oldPragra from "@/assets/sponsors/old_pragra_opaque_Image20260606195005.png";
+import logoAlgonquin from "@/assets/logos/Alogongquin_Screenshot 2026-06-06 220004.png";
+import logoCrowdbyte from "@/assets/logos/Crowd_byte_Screenshot 2026-06-06 215927.png";
+import logoInvest from "@/assets/logos/io-logo-svg.svg";
+import logoPackt from "@/assets/logos/packt-Dz-8EKdV.svg";
+import logoWct from "@/assets/logos/wct-logo_dark.png";
+import logoKodeKloud from "@/assets/logos/Kode_cloud_Screenshot 2026-06-06 220755.png";
+import logoLiatrio from "@/assets/logos/liatrio-logo-dark.svg";
+import logoTEK from "@/assets/logos/teksystems-logo.svg";
+import logoAirCanada from "@/assets/logos/Air_canada_Screenshot 2026-06-06 220555.png";
+import logoNorthernCU from "@/assets/logos/Northern_Credit_union_Screenshot 2026-06-06 220400.png";
+import logoServerlessGuru from "@/assets/logos/server_less_guru_Screenshot 2026-06-06 220456.png";
+import logoSolace from "@/assets/logos/solace_Screenshot 2026-06-06 222643.png";
+import logoBlackDuck from "@/assets/logos/Black_duck_Screenshot 2026-06-06 222741.png";
+import logoClio from "@/assets/logos/Clio_Screenshot 2026-06-06 222910.png";
+import logoScotiaBank from "@/assets/logos/Scotia_bankScreenshot 2026-06-06 223013.png";
+import logoAmpleInsights from "@/assets/logos/Ample_insights_Screenshot 2026-06-06 223112.png";
 
 
 const galleryImages = Object.values(
@@ -11,7 +40,7 @@ const galleryImages = Object.values(
 
 const CONF_URL = "https://www.eventbrite.com/e/aws-community-day-ottawa-tickets-1987796160827";
 const COMMUNITY_DAY_LABEL = "Community Day";
-const HACK_URL = "https://www.eventbrite.com/e/devops-for-genai-hackathon-ottawa-2026-tickets-1984872192158";
+const HACK_URL = "https://communityhackathons.com";
 const VENUE = "Invest Ottawa, 7 Bayview Rd, Ottawa, ON";
 const EVENT_DATE = "August 21–22, 2026";
 
@@ -20,12 +49,19 @@ const VOLUNTEER_FORM_URL = "https://forms.gle/YnbVmSmUGpV6PoFq6";
 const SPONSOR_CONTACT_EMAIL = "info@capitalcarbonconsulting.com";
 
 const SPEAKERS = [
-  { name: "Speaker TBA", role: "Keynote Speaker", company: "Coming Soon", image: "" },
-  { name: "Speaker TBA", role: "Cloud Architect", company: "Coming Soon", image: "" },
-  { name: "Speaker TBA", role: "DevOps Engineer", company: "Coming Soon", image: "" },
-  { name: "Speaker TBA", role: "AI/ML Specialist", company: "Coming Soon", image: "" },
-  { name: "Speaker TBA", role: "Platform Engineer", company: "Coming Soon", image: "" },
-  { name: "Speaker TBA", role: "GenAI Practitioner", company: "Coming Soon", image: "" },
+  { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "featured", aws: false, photo: headshotMary, logo: logoNorthernCU },
+  { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "featured", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
+  { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "featured", aws: true, photo: headshotAmar, logo: logoAirCanada },
+  { name: "John Willis", role: "Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/intheclouds", tier: "speaker", aws: false, photo: headshotJohn, logo: "" },
+  { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: "", logo: logoSolace },
+  { name: "Sumit Soni", role: "DevSecOps & AI Security Leader", desc: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI. How intelligent AI agents shift security from reactive gatekeeping to proactive autonomous orchestration.", linkedin: "https://www.linkedin.com/in/sumitksoni/", tier: "speaker", aws: true, photo: headshotSumit, logo: "" },
+  { name: "Md Waliullah", role: "Senior Security Architect, Black Duck", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: logoBlackDuck },
+  { name: "Demario Bell", role: "AWS North America Community Leader, Amazon Web Services", desc: "The Power of Community. Closing remarks celebrating the impact of community-driven innovation.", linkedin: "https://www.linkedin.com/in/demario-bell-7a510994/", tier: "speaker", aws: true, photo: headshotDemario, logo: awsLogo },
+  { name: "Madeline Webster", role: "Engineering Manager, Clio", desc: "How AI is transforming the way development teams work, collaborate, and deliver software. AWS Community Builder alumna.", linkedin: "https://www.linkedin.com/in/madelinevdp", tier: "speaker", aws: true, photo: headshotMadeline, logo: logoClio },
+  { name: "Gautham Pallapa", role: "Technology Executive, Scotia Bank", desc: "Building an AI-forward Enterprise Platform Engineering Organization.", linkedin: "https://www.linkedin.com/in/gpallapa/", tier: "speaker", aws: false, photo: headshotGautham, logo: logoScotiaBank },
+  { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo },
+  { name: "Dheeraj Vagavolu", role: "Data Scientist, Ample Insights", desc: "Top 10 Rules for Rebuilding Products with AI. Practical rules for AI product transformation focusing on readiness, data quality, and trust.", linkedin: "https://www.linkedin.com/in/dheerajvagavolu/", tier: "speaker", aws: true, photo: headshotDheeraj, logo: logoAmpleInsights },
+  { name: "Garima Bajpai", role: "Keynote · AWS User Group Ottawa Lead", desc: "Closing Keynote. DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
 ];
 
 const GalleryCarousel = () => {
@@ -125,6 +161,7 @@ const Index = () => {
             <a href="#experience" className="hover:text-foreground transition-smooth">Experience</a>
             <a href="#gallery" className="hover:text-foreground transition-smooth">Gallery</a>
             <a href="#speakers" className="hover:text-foreground transition-smooth">Speakers</a>
+            <a href="#founders" className="hover:text-foreground transition-smooth">Founders</a>
             <a href="#sponsors" className="hover:text-foreground transition-smooth">Sponsors</a>
             <a href="#volunteers" className="hover:text-foreground transition-smooth">Volunteers</a>
           </div>
@@ -478,23 +515,108 @@ const Index = () => {
       {/* SPONSORS */}
       <section id="sponsors" className="py-24 md:py-32 bg-gradient-surface">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">06 / Sponsors</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Become a sponsor.</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              Partner with us to reach Canada's most engaged cloud and AI community.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 text-base h-14 px-8">
-                <a href={SPONSOR_DECK_URL} download>
-                  <Download className="mr-2 w-5 h-5" /> Download Sponsor Deck
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">06 / Sponsors</span>
+              <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Our sponsors & partners.</h2>
+            </div>
+
+            {/* Title Sponsor */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Title Sponsor</p>
+                <div className="flex justify-center">
+                  <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" className="p-6 hover:opacity-80 transition-smooth">
+                    <img src={awsLogo} alt="AWS" className="h-12 invert brightness-0 invert" />
+                  </a>
+                </div>
+            </div>
+
+            {/* Organizing Partners */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Organizing Partners</p>
+                <div className="flex flex-wrap justify-center gap-8 items-center">
+                  <a href="https://www.meetup.com/aws-ottawa/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={awsLogo} alt="AWS User Group Ottawa" className="h-7 invert brightness-0 invert" />
+                  </a>
+                  <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-10 object-contain" />
+                  </a>
+                </div>
+            </div>
+
+            {/* Community Partners */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Community Partners</p>
+                <div className="flex flex-wrap justify-center gap-8 items-center">
+                  <a href="https://www.algonquincollege.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoAlgonquin} alt="Algonquin College" className="h-9 object-contain" />
+                  </a>
+                  <a href="https://www.wct-fct.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoWct} alt="WCT" className="h-9 object-contain" />
+                  </a>
+                  <a href="https://www.investottawa.ca" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoInvest} alt="Invest Ottawa" className="h-9 object-contain" />
+                  </a>
+                  <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoPackt} alt="Packt" className="h-9 object-contain" />
+                  </a>
+                </div>
+            </div>
+
+            {/* Previous Sponsors */}
+            <div className="mb-16">
+              <h3 className="text-center text-lg font-bold mb-6">Previous Sponsors</h3>
+              <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+                <a href="https://pragra.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={oldPragra} alt="Pragra" className="h-8 object-contain" />
                 </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="text-base h-14 px-8 border-accent/40 bg-accent/5 hover:bg-accent/15">
-                <a href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20AWS%20Community%20Day%20Ottawa%202026`}>
-                  Contact Us About Sponsorship
+                <a href="https://www.liatrio.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoLiatrio} alt="Liatrio" className="h-8 object-contain" />
                 </a>
-              </Button>
+                <a href="https://www.teksystems.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoTEK} alt="TEKsystems" className="h-8 object-contain" />
+                </a>
+                <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={awsLogo} alt="AWS" className="h-6 invert brightness-0 invert" />
+                </a>
+                <a href="https://kodekloud.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoKodeKloud} alt="KodeKloud" className="h-8 object-contain" />
+                </a>
+                <a href="https://www.oreilly.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <span className="font-bold text-sm">O'Reilly</span>
+                </a>
+                <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoPackt} alt="Packt" className="h-7 object-contain" />
+                </a>
+                <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-7 object-contain" />
+                </a>
+                <a href="https://www.algonquincollege.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoAlgonquin} alt="Algonquin College" className="h-7 object-contain" />
+                </a>
+                <a href="https://www.solace.dev" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoSolace} alt="Solace" className="h-7 object-contain" />
+                </a>
+              </div>
+            </div>
+
+            {/* Become a Sponsor CTA */}
+            <div className="text-center">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                Partner with us to reach Canada's most engaged cloud and AI community.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 text-base h-14 px-8">
+                  <a href={SPONSOR_DECK_URL} download>
+                    <Download className="mr-2 w-5 h-5" /> Download Sponsor Deck
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="text-base h-14 px-8 border-accent/40 bg-accent/5 hover:bg-accent/15">
+                  <a href={`mailto:${SPONSOR_CONTACT_EMAIL}?subject=Sponsorship%20Inquiry%20-%20AWS%20Community%20Day%20Ottawa%202026`}>
+                    Contact Us About Sponsorship
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -509,23 +631,82 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mt-4">Industry leaders and community experts sharing real-world insights on AWS, DevOps, and GenAI.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {SPEAKERS.map((speaker, i) => (
-              <div key={i} className="group text-center">
-                <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-2 border-border group-hover:border-accent/60 transition-smooth">
-                  {speaker.image ? (
-                    <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-card flex items-center justify-center">
-                      <Mic className="w-8 h-8 text-muted-foreground/40" />
+          {/* Badge Cloud */}
+          <div className="relative">
+            {/* Featured row — large, centered */}
+            <div className="flex flex-wrap justify-center gap-6 mb-6">
+              {SPEAKERS.filter(s => s.tier === "featured").map((speaker, i) => (
+                <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-accent/40 bg-accent/5 hover:shadow-glow transition-smooth w-[280px] md:w-[300px]">
+                  {speaker.aws && (
+                    <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
+                  )}
+                  <div className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_25px_rgba(255,153,0,0.25)]" : "border-accent/50 group-hover:border-accent shadow-[0_0_25px_rgba(146,119,255,0.25)]"}`}>
+                    {speaker.photo ? (
+                      <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <span className={`text-2xl font-bold ${speaker.aws ? "text-[#FF9900]" : "text-accent"}`}>{speaker.name.split(' ').map(n => n[0]).join('')}</span>
+                    )}
+                  </div>
+                  <h4 className="font-bold text-lg group-hover:text-accent transition-smooth">{speaker.name}</h4>
+                  <p className="text-accent text-xs font-mono mt-0.5">{speaker.role}</p>
+                  <p className="text-muted-foreground text-xs mt-2 leading-relaxed">{speaker.desc}</p>
+                  {speaker.logo && (
+                    <div className="mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth">
+                      <img src={speaker.logo} alt="" className="h-full object-contain" />
                     </div>
                   )}
-                </div>
-                <h4 className="font-bold text-sm">{speaker.name}</h4>
-                <p className="text-xs text-muted-foreground">{speaker.role}</p>
-                <p className="text-xs text-accent/70">{speaker.company}</p>
-              </div>
-            ))}
+                </a>
+              ))}
+            </div>
+
+          {/* Speaker cloud — scattered smaller badges */}
+            <div className="flex flex-wrap justify-center gap-4">
+              {SPEAKERS.filter(s => s.tier === "speaker").map((speaker, i) => {
+                const sizes = ["w-[180px]", "w-[200px]", "w-[170px]", "w-[190px]", "w-[210px]", "w-[175px]", "w-[195px]", "w-[185px]", "w-[205px]"];
+                const offsets = ["mt-0", "mt-4", "mt-2", "mt-6", "mt-1", "mt-5", "mt-3", "mt-2", "mt-4"];
+                return (
+                  <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className={`group relative flex flex-col items-center text-center p-4 rounded-2xl border bg-gradient-card border-border hover:border-accent/40 transition-smooth hover:shadow-elevated ${sizes[i % sizes.length]} ${offsets[i % offsets.length]}`}>
+                    {speaker.aws && (
+                      <span className="absolute top-2 right-2 px-1 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[7px] font-bold">AWS</span>
+                    )}
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/30 group-hover:border-[#FF9900]" : "border-border group-hover:border-accent/60"}`}>
+                      {speaker.photo ? (
+                        <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className={`text-sm font-bold ${speaker.aws ? "text-[#FF9900]" : "text-muted-foreground group-hover:text-accent"}`}>{speaker.name.split(' ').map(n => n[0]).join('')}</span>
+                      )}
+                    </div>
+                    <h4 className="font-bold text-xs group-hover:text-accent transition-smooth leading-tight">{speaker.name}</h4>
+                    <p className="text-muted-foreground text-[10px] mt-0.5">{speaker.role}</p>
+                    {speaker.logo && (
+                      <div className="mt-2 h-4 opacity-50 group-hover:opacity-100 transition-smooth">
+                        <img src={speaker.logo} alt="" className="h-full object-contain" />
+                      </div>
+                    )}
+                  </a>
+                );
+              })}
+            </div>
+
+            {/* Closing Keynote */}
+            <div className="flex justify-center mt-10">
+              {SPEAKERS.filter(s => s.tier === "keynote").map((speaker, i) => (
+                <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-[#FF9900]/40 bg-[#FF9900]/5 hover:shadow-[0_0_30px_rgba(255,153,0,0.2)] transition-smooth w-[280px] md:w-[300px]">
+                  <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
+                  <div className="w-24 h-24 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_25px_rgba(255,153,0,0.25)] transition-smooth">
+                    <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="font-bold text-lg group-hover:text-[#FF9900] transition-smooth">{speaker.name}</h4>
+                  <p className="text-[#FF9900] text-xs font-mono mt-0.5">{speaker.role}</p>
+                  <p className="text-muted-foreground text-xs mt-2 leading-relaxed">{speaker.desc}</p>
+                  {speaker.logo && (
+                    <div className="mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth">
+                      <img src={speaker.logo} alt="" className="h-full object-contain" />
+                    </div>
+                  )}
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="text-center mt-12">
@@ -547,8 +728,17 @@ const Index = () => {
             <span className="font-mono text-xs uppercase tracking-widest text-accent">08 / Volunteers</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Help us make it happen.</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              AWS Community Day Ottawa is 100% community-driven. We're looking for passionate volunteers to help with event logistics, registration, speaker support, and more. It's a great way to give back, build your network, and be part of something meaningful.
+              AWS Community Day Ottawa is 100% community-driven. We're looking for passionate volunteers to help with event logistics, registration, speaker support, and more.
             </p>
+
+            <div className="flex flex-wrap justify-center gap-4 mb-10">
+              {["Gokul Radhakrishnan", "Dhruvi Madlani", "Harleen Kaur", "Kira Evan", "Matthew Ehiwere"].map((name) => (
+                <div key={name} className="px-4 py-2 rounded-full bg-gradient-card border border-border">
+                  <span className="text-sm font-medium">{name}</span>
+                </div>
+              ))}
+            </div>
+
             <div className="grid md:grid-cols-3 gap-6 mb-10 text-left">
               {[
                 { title: "Event Day Support", desc: "Help with registration, wayfinding, and attendee experience." },
@@ -566,6 +756,38 @@ const Index = () => {
                 Sign Up to Volunteer <Heart className="ml-2 w-5 h-5" />
               </a>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDERS */}
+      <section id="founders" className="py-24 md:py-32 bg-gradient-surface">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mb-16">
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">09 / Founders</span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4">The minds behind the movement.</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { name: "Garima Bajpai", role: "Co-Founder", tag: "DevOps Executive of the Year", desc: "Senior Leader recognized at DevOps Dozen Awards. AWS User Group Ottawa lead. Author on Technology Leadership. Bridges DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", aws: true, photo: headshotGarima },
+              { name: "John Willis", role: "Co-Founder", tag: "DevOps Handbook Co-Author", desc: "Pioneer of the DevOps movement. Co-authored The DevOps Handbook & Beyond The Phoenix Project. Exploring synergy between GenAI and Deming's principles.", linkedin: "https://www.linkedin.com/in/intheclouds", aws: false, photo: headshotJohn },
+            ].map(({ name, role, tag, desc, linkedin, aws, photo }) => (
+              <a key={name} href={linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex items-center gap-5 p-6 rounded-2xl bg-gradient-card border border-accent/30 hover:shadow-glow transition-smooth">
+                {aws && (
+                  <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[8px] font-bold">AWS</span>
+                )}
+                <div className={`w-20 h-20 rounded-full border-2 overflow-hidden shrink-0 transition-smooth ${aws ? "border-[#FF9900]/40 group-hover:border-[#FF9900]" : "border-accent/40 group-hover:border-accent"}`}>
+                  <img src={photo} alt={name} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold group-hover:text-accent transition-smooth">{name}</h4>
+                  <p className="text-muted-foreground text-sm">{role}</p>
+                  <p className="text-muted-foreground/70 text-xs mt-1 leading-relaxed">{desc}</p>
+                  <span className="inline-block mt-2 px-2 py-0.5 rounded-full bg-accent/10 border border-accent/30 text-accent font-mono text-[10px]">{tag}</span>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
