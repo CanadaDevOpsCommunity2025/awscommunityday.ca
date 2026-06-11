@@ -16,8 +16,11 @@ import headshotSumit from "@/assets/headshots/sumit_profile - sumit soni.png";
 import headshotDaniel from "@/assets/headshots/Summit - Daniel Clement.jpg";
 import headshotWali from "@/assets/headshots/Wali-ProfilePhoto - Md Waliullah.png";
 import oldPragra from "@/assets/sponsors/old_pragra_opaque_Image20260606195005.png";
-import logoAlgonquin from "@/assets/logos/Alogongquin_Screenshot 2026-06-06 220004.png";
-import logoCrowdbyte from "@/assets/logos/Crowd_byte_Screenshot 2026-06-06 215927.png";
+import logoNewFound from "@/assets/logos/NewFound_soultions_Screenshot 2026-06-11 000345.png";
+import logoOpaque from "@/assets/logos/Opaque_Screenshot 2026-06-11 000302.png";
+import logoOreilly from "@/assets/logos/Oriely_download.png";
+import logoAlgonquin from "@/assets/logos/Algonquin_logo_AC_WORDMARK_1C_GRN.png";
+import logoCrowdbyte from "@/assets/logos/logo new_version1.0_logo-main - white.png";
 import logoInvest from "@/assets/logos/io-logo-svg.svg";
 import logoPackt from "@/assets/logos/packt-Dz-8EKdV.svg";
 import logoWct from "@/assets/logos/wct-logo_dark.png";
@@ -49,19 +52,19 @@ const VOLUNTEER_FORM_URL = "https://forms.gle/YnbVmSmUGpV6PoFq6";
 const SPONSOR_CONTACT_EMAIL = "info@capitalcarbonconsulting.com";
 
 const SPEAKERS = [
-  { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "featured", aws: false, photo: headshotMary, logo: logoNorthernCU },
-  { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "featured", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
-  { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "featured", aws: true, photo: headshotAmar, logo: logoAirCanada },
-  { name: "John Willis", role: "Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/intheclouds", tier: "speaker", aws: false, photo: headshotJohn, logo: "" },
+  { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "speaker", aws: false, photo: headshotMary, logo: logoNorthernCU },
+  { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "speaker", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
+  { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "speaker", aws: true, photo: headshotAmar, logo: logoAirCanada },
+  { name: "John Willis", role: "Keynote · Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", tier: "keynote", aws: false, photo: headshotJohn, logo: "" },
   { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: "", logo: logoSolace },
   { name: "Sumit Soni", role: "DevSecOps & AI Security Leader", desc: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI. How intelligent AI agents shift security from reactive gatekeeping to proactive autonomous orchestration.", linkedin: "https://www.linkedin.com/in/sumitksoni/", tier: "speaker", aws: true, photo: headshotSumit, logo: "" },
   { name: "Md Waliullah", role: "Senior Security Architect, Black Duck", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: logoBlackDuck },
-  { name: "Demario Bell", role: "AWS North America Community Leader, Amazon Web Services", desc: "The Power of Community. Closing remarks celebrating the impact of community-driven innovation.", linkedin: "https://www.linkedin.com/in/demario-bell-7a510994/", tier: "speaker", aws: true, photo: headshotDemario, logo: awsLogo },
+  { name: "Demario Bell", role: "Closing Remarks · AWS North America Community Leader, Amazon Web Services", desc: "The Power of Community. Celebrating the impact of community-driven innovation.", linkedin: "https://www.linkedin.com/in/demario-bell-7a510994/", tier: "closing", aws: true, photo: headshotDemario, logo: awsLogo },
   { name: "Madeline Webster", role: "Engineering Manager, Clio", desc: "How AI is transforming the way development teams work, collaborate, and deliver software. AWS Community Builder alumna.", linkedin: "https://www.linkedin.com/in/madelinevdp", tier: "speaker", aws: true, photo: headshotMadeline, logo: logoClio },
   { name: "Gautham Pallapa", role: "Technology Executive, Scotia Bank", desc: "Building an AI-forward Enterprise Platform Engineering Organization.", linkedin: "https://www.linkedin.com/in/gpallapa/", tier: "speaker", aws: false, photo: headshotGautham, logo: logoScotiaBank },
-  { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo },
+  { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo, photoPosition: "object-[center_20%]" },
   { name: "Dheeraj Vagavolu", role: "Data Scientist, Ample Insights", desc: "Top 10 Rules for Rebuilding Products with AI. Practical rules for AI product transformation focusing on readiness, data quality, and trust.", linkedin: "https://www.linkedin.com/in/dheerajvagavolu/", tier: "speaker", aws: true, photo: headshotDheeraj, logo: logoAmpleInsights },
-  { name: "Garima Bajpai", role: "Keynote · AWS User Group Ottawa Lead", desc: "Closing Keynote. DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
+  { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
 ];
 
 const GalleryCarousel = () => {
@@ -536,10 +539,10 @@ const Index = () => {
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Organizing Partners</p>
                 <div className="flex flex-wrap justify-center gap-8 items-center">
                   <a href="https://www.meetup.com/aws-ottawa/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={awsLogo} alt="AWS User Group Ottawa" className="h-7 invert brightness-0 invert" />
+                    <span className="font-bold text-sm">AWS User Group Ottawa</span>
                   </a>
                   <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-10 object-contain" />
+                    <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-14 object-contain" />
                   </a>
                 </div>
             </div>
@@ -549,7 +552,7 @@ const Index = () => {
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Community Partners</p>
                 <div className="flex flex-wrap justify-center gap-8 items-center">
                   <a href="https://www.algonquincollege.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoAlgonquin} alt="Algonquin College" className="h-9 object-contain" />
+                    <img src={logoAlgonquin} alt="Algonquin College" className="h-16 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
                   </a>
                   <a href="https://www.wct-fct.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoWct} alt="WCT" className="h-9 object-contain invert" />
@@ -566,10 +569,7 @@ const Index = () => {
             {/* Previous Sponsors */}
             <div className="mb-16">
               <h3 className="text-center text-lg font-bold mb-6">Previous Sponsors</h3>
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
-                <a href="https://pragra.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={oldPragra} alt="Pragra" className="h-8 object-contain invert" />
-                </a>
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 <a href="https://www.liatrio.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
                   <img src={logoLiatrio} alt="Liatrio" className="h-8 object-contain invert" />
                 </a>
@@ -583,19 +583,22 @@ const Index = () => {
                   <img src={logoKodeKloud} alt="KodeKloud" className="h-8 object-contain" />
                 </a>
                 <a href="https://www.oreilly.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <span className="font-bold text-sm">O'Reilly</span>
+                  <img src={logoOreilly} alt="O'Reilly" className="h-8 object-contain invert" />
                 </a>
                 <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
                   <img src={logoPackt} alt="Packt" className="h-7 object-contain invert" />
                 </a>
                 <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-7 object-contain" />
+                  <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-10 object-contain" />
                 </a>
                 <a href="https://www.algonquincollege.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoAlgonquin} alt="Algonquin College" className="h-7 object-contain" />
+                  <img src={logoAlgonquin} alt="Algonquin College" className="h-12 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
                 </a>
-                <a href="https://www.solace.dev" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
-                  <img src={logoSolace} alt="Solace" className="h-7 object-contain invert" />
+                <a href="https://newfoundrecruiting.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoNewFound} alt="NewFound Recruiting" className="h-8 object-contain" />
+                </a>
+                <a href="https://opaque.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-smooth">
+                  <img src={logoOpaque} alt="Opaque" className="h-8 object-contain invert" />
                 </a>
               </div>
             </div>
@@ -631,21 +634,41 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mt-4">Industry leaders and community experts sharing real-world insights on AWS, DevOps, and GenAI.</p>
           </div>
 
-          {/* Badge Cloud */}
-          <div className="relative">
-            {/* Featured row — large, centered */}
-            <div className="flex flex-wrap justify-center gap-6 mb-6">
-              {SPEAKERS.filter(s => s.tier === "featured").map((speaker, i) => (
+          {/* All Speakers — equal size */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {SPEAKERS.filter(s => s.tier === "speaker").map((speaker, i) => (
+              <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-5 rounded-2xl border bg-gradient-card border-border hover:border-accent/40 transition-smooth hover:shadow-elevated">
+                {speaker.aws && (
+                  <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[8px] font-bold">AWS</span>
+                )}
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-3 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/30 group-hover:border-[#FF9900]" : "border-border group-hover:border-accent/60"}`}>
+                  {speaker.photo ? (
+                    <img src={speaker.photo} alt={speaker.name} className={`w-full h-full object-cover ${speaker.photoPosition || "object-top"}`} />
+                  ) : (
+                    <span className={`text-lg font-bold ${speaker.aws ? "text-[#FF9900]" : "text-muted-foreground group-hover:text-accent"}`}>{speaker.name.split(' ').map(n => n[0]).join('')}</span>
+                  )}
+                </div>
+                <h4 className="font-bold text-sm group-hover:text-accent transition-smooth">{speaker.name}</h4>
+                <p className="text-muted-foreground text-[10px] mt-0.5">{speaker.role}</p>
+                <p className="text-muted-foreground/70 text-[10px] mt-1 leading-relaxed">{speaker.desc}</p>
+                {speaker.logo && (
+                  <div className="mt-2 h-5 opacity-70 group-hover:opacity-100 transition-smooth">
+                    <img src={speaker.logo} alt="" className="h-full object-contain" />
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
+
+            {/* Keynote & Closing — highlighted at bottom */}
+            <div className="flex flex-wrap justify-center gap-6 mt-10">
+              {SPEAKERS.filter(s => s.tier === "keynote").map((speaker, i) => (
                 <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-accent/40 bg-accent/5 hover:shadow-glow transition-smooth w-[280px] md:w-[300px]">
                   {speaker.aws && (
                     <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
                   )}
-                  <div className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_25px_rgba(255,153,0,0.25)]" : "border-accent/50 group-hover:border-accent shadow-[0_0_25px_rgba(146,119,255,0.25)]"}`}>
-                    {speaker.photo ? (
-                      <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <span className={`text-2xl font-bold ${speaker.aws ? "text-[#FF9900]" : "text-accent"}`}>{speaker.name.split(' ').map(n => n[0]).join('')}</span>
-                    )}
+                  <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_20px_rgba(255,153,0,0.2)]" : "border-accent/50 group-hover:border-accent shadow-[0_0_20px_rgba(146,119,255,0.2)]"}`}>
+                    <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <h4 className="font-bold text-lg group-hover:text-accent transition-smooth">{speaker.name}</h4>
                   <p className="text-accent text-xs font-mono mt-0.5">{speaker.role}</p>
@@ -657,44 +680,11 @@ const Index = () => {
                   )}
                 </a>
               ))}
-            </div>
-
-          {/* Speaker cloud — scattered smaller badges */}
-            <div className="flex flex-wrap justify-center gap-4">
-              {SPEAKERS.filter(s => s.tier === "speaker").map((speaker, i) => {
-                const sizes = ["w-[180px]", "w-[200px]", "w-[170px]", "w-[190px]", "w-[210px]", "w-[175px]", "w-[195px]", "w-[185px]", "w-[205px]"];
-                const offsets = ["mt-0", "mt-4", "mt-2", "mt-6", "mt-1", "mt-5", "mt-3", "mt-2", "mt-4"];
-                return (
-                  <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className={`group relative flex flex-col items-center text-center p-4 rounded-2xl border bg-gradient-card border-border hover:border-accent/40 transition-smooth hover:shadow-elevated ${sizes[i % sizes.length]} ${offsets[i % offsets.length]}`}>
-                    {speaker.aws && (
-                      <span className="absolute top-2 right-2 px-1 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[7px] font-bold">AWS</span>
-                    )}
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/30 group-hover:border-[#FF9900]" : "border-border group-hover:border-accent/60"}`}>
-                      {speaker.photo ? (
-                        <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <span className={`text-sm font-bold ${speaker.aws ? "text-[#FF9900]" : "text-muted-foreground group-hover:text-accent"}`}>{speaker.name.split(' ').map(n => n[0]).join('')}</span>
-                      )}
-                    </div>
-                    <h4 className="font-bold text-xs group-hover:text-accent transition-smooth leading-tight">{speaker.name}</h4>
-                    <p className="text-muted-foreground text-[10px] mt-0.5">{speaker.role}</p>
-                    {speaker.logo && (
-                      <div className="mt-2 h-4 opacity-50 group-hover:opacity-100 transition-smooth">
-                        <img src={speaker.logo} alt="" className="h-full object-contain" />
-                      </div>
-                    )}
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Closing Keynote */}
-            <div className="flex justify-center mt-10">
-              {SPEAKERS.filter(s => s.tier === "keynote").map((speaker, i) => (
+              {SPEAKERS.filter(s => s.tier === "closing").map((speaker, i) => (
                 <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-[#FF9900]/40 bg-[#FF9900]/5 hover:shadow-[0_0_30px_rgba(255,153,0,0.2)] transition-smooth w-[280px] md:w-[300px]">
                   <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
-                  <div className="w-24 h-24 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_25px_rgba(255,153,0,0.25)] transition-smooth">
-                    <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover" />
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_20px_rgba(255,153,0,0.2)] transition-smooth">
+                    <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <h4 className="font-bold text-lg group-hover:text-[#FF9900] transition-smooth">{speaker.name}</h4>
                   <p className="text-[#FF9900] text-xs font-mono mt-0.5">{speaker.role}</p>
@@ -707,7 +697,6 @@ const Index = () => {
                 </a>
               ))}
             </div>
-          </div>
 
           <div className="text-center mt-12">
             <p className="text-muted-foreground mb-4">Interested in speaking? We'd love to hear from you.</p>
@@ -771,7 +760,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { name: "Garima Bajpai", role: "Co-Founder", tag: "DevOps Executive of the Year", desc: "Senior Leader recognized at DevOps Dozen Awards. AWS User Group Ottawa lead. Author on Technology Leadership. Bridges DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", aws: true, photo: headshotGarima },
-              { name: "John Willis", role: "Co-Founder", tag: "DevOps Handbook Co-Author", desc: "Pioneer of the DevOps movement. Co-authored The DevOps Handbook & Beyond The Phoenix Project. Exploring synergy between GenAI and Deming's principles.", linkedin: "https://www.linkedin.com/in/intheclouds", aws: false, photo: headshotJohn },
+              { name: "John Willis", role: "Co-Founder", tag: "DevOps Handbook Co-Author", desc: "Pioneer of the DevOps movement. Co-authored The DevOps Handbook & Beyond The Phoenix Project. Exploring synergy between GenAI and Deming's principles.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", aws: false, photo: headshotJohn },
             ].map(({ name, role, tag, desc, linkedin, aws, photo }) => (
               <a key={name} href={linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex items-center gap-5 p-6 rounded-2xl bg-gradient-card border border-accent/30 hover:shadow-glow transition-smooth">
                 {aws && (
