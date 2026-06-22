@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   cacheDir: "/tmp/.vite",
   base: "/",
-  assetsInclude: ["**/*.JPG"],
+  assetsInclude: ["**/*.JPG", "**/*.jfif"],
   server: {
     host: "::",
     port: 8080,

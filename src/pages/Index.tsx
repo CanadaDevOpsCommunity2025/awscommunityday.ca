@@ -15,10 +15,14 @@ import headshotMadeline from "@/assets/headshots/McLendon-Photography-0657 - Mad
 import headshotSumit from "@/assets/headshots/sumit_profile - sumit soni.png";
 import headshotDaniel from "@/assets/headshots/Summit - Daniel Clement.jpg";
 import headshotWali from "@/assets/headshots/Wali-ProfilePhoto - Md Waliullah.png";
+import headshotDima from "@/assets/headshots/Dema_1780368793013.png";
+import headshotRohini from "@/assets/headshots/Rohini_1667319874301.jfif";
 import oldPragra from "@/assets/sponsors/old_pragra_opaque_Image20260606195005.png";
 import logoNewFound from "@/assets/logos/NewFound_soultions_Screenshot 2026-06-11 000345.png";
 import logoOpaque from "@/assets/logos/Opaque_Screenshot 2026-06-11 000302.png";
 import logoOreilly from "@/assets/logos/Oriely_download.png";
+import logoTech2Step from "@/assets/logos/T2S logo variation_1 color P2.png";
+import logoCycode from "@/assets/logos/Cycode_Logo.jpg";
 import logoAlgonquin from "@/assets/logos/Algonquin_logo_AC_WORDMARK_1C_GRN.png";
 import logoCrowdbyte from "@/assets/logos/logo new_version1.0_logo-main - white.png";
 import logoInvest from "@/assets/logos/io-logo-svg.svg";
@@ -56,7 +60,7 @@ const SPEAKERS = [
   { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "speaker", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
   { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "speaker", aws: true, photo: headshotAmar, logo: logoAirCanada },
   { name: "John Willis", role: "Keynote · Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", tier: "keynote", aws: false, photo: headshotJohn, logo: "" },
-  { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: "", logo: logoSolace },
+  { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: headshotDima, logo: logoSolace },
   { name: "Sumit Soni", role: "DevSecOps & AI Security Leader", desc: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI. How intelligent AI agents shift security from reactive gatekeeping to proactive autonomous orchestration.", linkedin: "https://www.linkedin.com/in/sumitksoni/", tier: "speaker", aws: true, photo: headshotSumit, logo: "" },
   { name: "Md Waliullah", role: "Senior Security Architect, Black Duck", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: logoBlackDuck },
   { name: "Demario Bell", role: "Closing Remarks · AWS North America Community Leader, Amazon Web Services", desc: "The Power of Community. Celebrating the impact of community-driven innovation.", linkedin: "https://www.linkedin.com/in/demario-bell-7a510994/", tier: "closing", aws: true, photo: headshotDemario, logo: awsLogo },
@@ -64,6 +68,7 @@ const SPEAKERS = [
   { name: "Gautham Pallapa", role: "Technology Executive, Scotia Bank", desc: "Building an AI-forward Enterprise Platform Engineering Organization.", linkedin: "https://www.linkedin.com/in/gpallapa/", tier: "speaker", aws: false, photo: headshotGautham, logo: logoScotiaBank },
   { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo, photoPosition: "object-[center_20%]" },
   { name: "Dheeraj Vagavolu", role: "Data Scientist, Ample Insights", desc: "Top 10 Rules for Rebuilding Products with AI. Practical rules for AI product transformation focusing on readiness, data quality, and trust.", linkedin: "https://www.linkedin.com/in/dheerajvagavolu/", tier: "speaker", aws: true, photo: headshotDheeraj, logo: logoAmpleInsights },
+  { name: "Rohini Gaonkar", role: "Speaker", desc: "Speaker at AWS Community Day Ottawa 2026.", linkedin: "https://www.linkedin.com/in/rohinigaonkar/", tier: "speaker", aws: false, photo: headshotRohini, logo: "" },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
 ];
 
@@ -534,6 +539,16 @@ const Index = () => {
                 </div>
             </div>
 
+            {/* Silver Partner */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Silver Partner</p>
+                <div className="flex justify-center">
+                  <a href="https://cycode.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoCycode} alt="Cycode" className="h-10 object-contain" />
+                  </a>
+                </div>
+            </div>
+
             {/* Organizing Partners */}
             <div className="mb-10">
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Organizing Partners</p>
@@ -562,6 +577,9 @@ const Index = () => {
                   </a>
                   <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoPackt} alt="Packt" className="h-9 object-contain invert" />
+                  </a>
+                  <a href="https://tech2step.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoTech2Step} alt="Tech 2 Step" className="h-9 object-contain" />
                   </a>
                 </div>
             </div>
