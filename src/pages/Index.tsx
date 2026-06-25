@@ -171,7 +171,6 @@ const Index = () => {
             <a href="#speakers" className="hover:text-foreground transition-smooth">Speakers</a>
             <a href="#founders" className="hover:text-foreground transition-smooth">Founders</a>
             <a href="#sponsors" className="hover:text-foreground transition-smooth">Sponsors</a>
-            <a href="#volunteers" className="hover:text-foreground transition-smooth">Volunteers</a>
           </div>
           <Button asChild size="sm" className="bg-gradient-primary hover:opacity-90 border-0">
             <a href={CONF_URL} target="_blank" rel="noopener noreferrer">Register</a>
@@ -578,8 +577,8 @@ const Index = () => {
                   <a href="https://www.packtpub.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoPackt} alt="Packt" className="h-9 object-contain invert" />
                   </a>
-                  <a href="https://tech2step.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoTech2Step} alt="Tech 2 Step" className="h-12 object-contain" />
+                  <a href="https://ca.linkedin.com/company/tech2step" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
+                    <img src={logoTech2Step} alt="Tech 2 Step" className="h-16 object-contain" />
                   </a>
                 </div>
             </div>
@@ -721,46 +720,6 @@ const Index = () => {
             <Button asChild variant="outline" className="border-accent/40 bg-accent/5 hover:bg-accent/15">
               <a href="https://forms.gle/Fw85zJWMmsjKRRUx8" target="_blank" rel="noopener noreferrer">
                 Submit a Talk Proposal <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* VOLUNTEERS */}
-      <section id="volunteers" className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Heart className="w-12 h-12 mx-auto mb-6 text-accent" />
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">08 / Volunteers</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Help us make it happen.</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              AWS Community Day Ottawa is 100% community-driven. We're looking for passionate volunteers to help with event logistics, registration, speaker support, and more.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              {["Gokul Radhakrishnan", "Dhruvi Madlani", "Harleen Kaur", "Kira Evan", "Matthew Ehiwere"].map((name) => (
-                <div key={name} className="px-4 py-2 rounded-full bg-gradient-card border border-border">
-                  <span className="text-sm font-medium">{name}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-10 text-left">
-              {[
-                { title: "Event Day Support", desc: "Help with registration, wayfinding, and attendee experience." },
-                { title: "Technical Support", desc: "Assist speakers with A/V setup and hackathon logistics." },
-                { title: "Community Outreach", desc: "Help spread the word and engage the local tech community." },
-              ].map(({ title, desc }) => (
-                <div key={title} className="p-6 rounded-xl bg-gradient-card border border-border">
-                  <h4 className="font-bold mb-2">{title}</h4>
-                  <p className="text-sm text-muted-foreground">{desc}</p>
-                </div>
-              ))}
-            </div>
-            <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 text-base h-14 px-8">
-              <a href={VOLUNTEER_FORM_URL} target="_blank" rel="noopener noreferrer">
-                Sign Up to Volunteer <Heart className="ml-2 w-5 h-5" />
               </a>
             </Button>
           </div>
