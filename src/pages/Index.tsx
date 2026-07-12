@@ -39,6 +39,8 @@ import logoBlackDuck from "@/assets/logos/Black_duck_Screenshot 2026-06-06 22274
 import logoClio from "@/assets/logos/Clio_Screenshot 2026-06-06 222910.png";
 import logoScotiaBank from "@/assets/logos/Scotia_bankScreenshot 2026-06-06 223013.png";
 import logoAmpleInsights from "@/assets/logos/Ample_insights_Screenshot 2026-06-06 223112.png";
+import headshotRupal from "@/assets/headshots/SRH0952 - Rupal Bhatt.jpg";
+import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
 
 
 const galleryImages = Object.values(
@@ -59,7 +61,7 @@ const SPEAKERS = [
   { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "speaker", aws: false, photo: headshotMary, logo: logoNorthernCU },
   { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "speaker", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
   { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "speaker", aws: true, photo: headshotAmar, logo: logoAirCanada },
-  { name: "John Willis", role: "Keynote · Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", tier: "keynote", aws: false, photo: headshotJohn, logo: "" },
+  { name: "John Willis", role: "Keynote · Masterclass Instructor · Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", tier: "keynote", aws: false, photo: headshotJohn, logo: "" },
   { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: headshotDima, logo: logoSolace, photoPosition: "object-[40%_top]" },
   { name: "Sumit Soni", role: "DevSecOps & AI Security Leader", desc: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI. How intelligent AI agents shift security from reactive gatekeeping to proactive autonomous orchestration.", linkedin: "https://www.linkedin.com/in/sumitksoni/", tier: "speaker", aws: true, photo: headshotSumit, logo: "" },
   { name: "Md Waliullah", role: "Senior Security Architect, Black Duck", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: logoBlackDuck },
@@ -69,6 +71,7 @@ const SPEAKERS = [
   { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo, photoPosition: "object-[center_20%]" },
   { name: "Dheeraj Vagavolu", role: "Data Scientist, Ample Insights", desc: "Top 10 Rules for Rebuilding Products with AI. Practical rules for AI product transformation focusing on readiness, data quality, and trust.", linkedin: "https://www.linkedin.com/in/dheerajvagavolu/", tier: "speaker", aws: true, photo: headshotDheeraj, logo: logoAmpleInsights },
   { name: "Rohini Gaonkar", role: "Solutions Architect, Amazon Web Services", desc: "AWS cloud expert helping customers build scalable and secure solutions.", linkedin: "https://www.linkedin.com/in/rohinigaonkar/", tier: "speaker", aws: true, photo: headshotRohini, logo: awsLogo },
+  { name: "Rupal Bhatt", role: "Cloud Intelligence", desc: "Selecting the Right Use Case for GenAI. Why the biggest blockers aren't the LLMs — they're choosing the right problems, defining success upfront, and keeping unit costs in check as you scale.", linkedin: "https://www.linkedin.com/in/rupal-bhatt/", tier: "speaker", aws: false, photo: headshotRupal, logo: logoCloudIntelligence },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
 ];
 
@@ -167,6 +170,7 @@ const Index = () => {
             <a href="#tracks" className="hover:text-foreground transition-smooth">Tracks</a>
             <a href="#agenda" className="hover:text-foreground transition-smooth">Agenda</a>
             <a href="#experience" className="hover:text-foreground transition-smooth">Experience</a>
+            <a href="#masterclass" className="hover:text-accent transition-smooth text-accent/80 font-medium">Masterclass</a>
             <a href="#gallery" className="hover:text-foreground transition-smooth">Gallery</a>
             <a href="#speakers" className="hover:text-foreground transition-smooth">Speakers</a>
             <a href="#founders" className="hover:text-foreground transition-smooth">Founders</a>
@@ -225,7 +229,7 @@ const Index = () => {
                 <span className="flex items-center gap-2"><Users className="w-4 h-4 text-accent" /> Community-driven</span>
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-4">
                 <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 text-base h-14 px-8 shadow-glow animate-pulse-glow relative overflow-hidden">
                   <a href={CONF_URL} target="_blank" rel="noopener noreferrer">
                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_2s_infinite]" />
@@ -235,6 +239,13 @@ const Index = () => {
                 <Button asChild size="lg" className="text-base h-14 px-8 bg-background/20 backdrop-blur-sm border border-accent/50 shadow-[0_0_15px_rgba(146,119,255,0.15)] hover:shadow-[0_0_25px_rgba(146,119,255,0.3)] hover:border-accent/80 hover:bg-accent/10 transition-all duration-300">
                   <a href={HACK_URL} target="_blank" rel="noopener noreferrer">
                     Register for Hackathon <Code2 className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="text-base h-14 px-8 bg-accent/10 backdrop-blur-sm border border-accent/40 hover:bg-accent/20 hover:border-accent/70 hover:shadow-[0_0_25px_rgba(146,119,255,0.25)] transition-all duration-300">
+                  <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
+                    <Sparkles className="mr-2 w-5 h-5 text-accent" /> Masterclass - DevOps, AI, and Agents with John Willis <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </div>
@@ -513,6 +524,51 @@ const Index = () => {
               </div>
             ))}
           </div>
+
+
+        </div>
+      </section>
+
+      {/* MASTERCLASS */}
+      <section id="masterclass" className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-primary/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px]" />
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm mb-6">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="font-mono text-xs uppercase tracking-widest text-accent">Exclusive · Limited Seats</span>
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold">Masterclass</h2>
+              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Agents with John Willis</p>
+            </div>
+
+            <div className="p-8 md:p-12 rounded-3xl border border-accent/40 bg-background/50 backdrop-blur-sm shadow-[0_0_60px_rgba(146,119,255,0.1)]">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="shrink-0">
+                  <div className="w-32 h-32 rounded-2xl border-2 border-accent/50 overflow-hidden shadow-[0_0_30px_rgba(146,119,255,0.2)]">
+                    <img src={headshotJohn} alt="John Willis" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <p className="text-center font-bold text-sm mt-3">John Willis</p>
+                  <p className="text-center text-muted-foreground text-[10px]">Co-Author, The DevOps Handbook</p>
+                </div>
+                <div className="flex-1">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    An exclusive deep-dive masterclass by John Willis — co-author of The DevOps Handbook and pioneer of the DevOps movement. Explore the synergy between Generative AI, Agentic workflows, and Deming's principles of transformation.
+                  </p>
+                  <p className="text-sm text-muted-foreground/70 mb-6">
+                    ⚠️ This is a separate ticket — not included with the AWS Community Day or Hackathon registration.
+                  </p>
+                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 h-14 px-8 shadow-glow animate-pulse-glow">
+                    <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
+                      Get Masterclass Ticket <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -716,12 +772,9 @@ const Index = () => {
             </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">Interested in speaking? We'd love to hear from you.</p>
-            <Button asChild variant="outline" className="border-accent/40 bg-accent/5 hover:bg-accent/15">
-              <a href="https://forms.gle/Fw85zJWMmsjKRRUx8" target="_blank" rel="noopener noreferrer">
-                Submit a Talk Proposal <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </Button>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-muted/30">
+              <span className="text-muted-foreground text-sm">Speaker lineup is now closed. See you at the event!</span>
+            </div>
           </div>
         </div>
       </section>
