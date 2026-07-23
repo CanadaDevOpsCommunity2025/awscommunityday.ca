@@ -9,7 +9,6 @@ import headshotMary from "@/assets/headshots/AWS Headshot - Anuja Gunaratnam.jpg
 import headshotCyril from "@/assets/headshots/Cyril-clean (1) - Bandolo.png";
 import headshotAmar from "@/assets/headshots/Linkedin- rougnt-image-Amar - Amarjit Dhillon.png";
 import headshotDheeraj from "@/assets/headshots/dheeraj_vagavolu.jpg";
-import headshotDemario from "@/assets/headshots/demario - DeMario Bell.jpg";
 import headshotGautham from "@/assets/headshots/gautham-home-1k - Gautham Pallapa.jpg";
 import headshotMadeline from "@/assets/headshots/McLendon-Photography-0657 - Maddy V.jpg";
 import headshotSumit from "@/assets/headshots/sumit_profile - sumit soni.png";
@@ -35,12 +34,19 @@ import logoAirCanada from "@/assets/logos/Air_canada_Screenshot 2026-06-06 22055
 import logoNorthernCU from "@/assets/logos/Northern_Credit_union_Screenshot 2026-06-06 220400.png";
 import logoServerlessGuru from "@/assets/logos/server_less_guru_Screenshot 2026-06-06 220456.png";
 import logoSolace from "@/assets/logos/solace_Screenshot 2026-06-06 222643.png";
-import logoBlackDuck from "@/assets/logos/Black_duck_Screenshot 2026-06-06 222741.png";
 import logoClio from "@/assets/logos/Clio_Screenshot 2026-06-06 222910.png";
 import logoScotiaBank from "@/assets/logos/Scotia_bankScreenshot 2026-06-06 223013.png";
 import logoAmpleInsights from "@/assets/logos/Ample_insights_Screenshot 2026-06-06 223112.png";
 import headshotRupal from "@/assets/headshots/SRH0952 - Rupal Bhatt.jpg";
+import headshotManas from "@/assets/headshots/MyPhoto - Manas Kumar Mondal.jpg";
+import headshotAlexander from "@/assets/headshots/IMG_4822 - Alexander Rey.jpeg";
+import headshotManoj from "@/assets/headshots/Manoj_selvakumar1593311470260.jpeg";
+import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
+import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
+import logoCapgemini from "@/assets/logos/new_capgemini-images.jpeg";
+import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x864.png";
+import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
 
 
 const galleryImages = Object.values(
@@ -64,16 +70,88 @@ const SPEAKERS = [
   { name: "John Willis", role: "Keynote · Masterclass Instructor · Co-Author, The DevOps Handbook", desc: "Pioneer of the DevOps movement. Exploring the synergy between Generative AI and the transformative principles of Dr. Edwards Deming.", linkedin: "https://www.linkedin.com/in/johnwillisatlanta/", tier: "keynote", aws: false, photo: headshotJohn, logo: "" },
   { name: "Dima Dababneh", role: "Software Engineering Manager, Solace", desc: "Building AI Features That Survive Production. Practical patterns for creating AI systems that are reliable, observable, and trusted by users.", linkedin: "https://www.linkedin.com/in/dima-dababneh", tier: "speaker", aws: false, photo: headshotDima, logo: logoSolace, photoPosition: "object-[40%_top]" },
   { name: "Sumit Soni", role: "DevSecOps & AI Security Leader", desc: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI. How intelligent AI agents shift security from reactive gatekeeping to proactive autonomous orchestration.", linkedin: "https://www.linkedin.com/in/sumitksoni/", tier: "speaker", aws: true, photo: headshotSumit, logo: "" },
-  { name: "Md Waliullah", role: "Senior Security Architect, Black Duck", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: logoBlackDuck },
-  { name: "Demario Bell", role: "Closing Remarks · AWS North America Community Leader, Amazon Web Services", desc: "The Power of Community. Celebrating the impact of community-driven innovation.", linkedin: "https://www.linkedin.com/in/demario-bell-7a510994/", tier: "closing", aws: true, photo: headshotDemario, logo: awsLogo },
-  { name: "Madeline Webster", role: "Engineering Manager, Clio", desc: "How AI is transforming the way development teams work, collaborate, and deliver software. AWS Community Builder alumna.", linkedin: "https://www.linkedin.com/in/madelinevdp", tier: "speaker", aws: true, photo: headshotMadeline, logo: logoClio },
+  { name: "Md Waliullah", role: "CEO, Imperial College of Business and Technology", desc: "Threat Modeling AI-Powered Applications: Securing the Next Generation of Cloud-Native Systems. Applying STRIDE, MITRE ATLAS, and secure AI lifecycle principles.", linkedin: "https://www.linkedin.com/in/mwaliullah/", tier: "speaker", aws: true, photo: headshotWali, logo: "" },
+  { name: "Madeline Webster", role: "Engineering Manager, Clio · AWS Community Builder", desc: "From Code to Context: How AI is Changing Software Development. How AI is transforming the way development teams work, collaborate, and deliver software.", linkedin: "https://www.linkedin.com/in/madelinevdp", tier: "speaker", aws: true, photo: headshotMadeline, logo: logoClio },
   { name: "Gautham Pallapa", role: "Technology Executive, Scotia Bank", desc: "Building an AI-forward Enterprise Platform Engineering Organization.", linkedin: "https://www.linkedin.com/in/gpallapa/", tier: "speaker", aws: false, photo: headshotGautham, logo: logoScotiaBank },
   { name: "Daniel Clement", role: "AWS Community Builder", desc: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation.", linkedin: "https://www.linkedin.com/in/danielclement1/", tier: "speaker", aws: true, photo: headshotDaniel, logo: awsLogo, photoPosition: "object-[center_20%]" },
   { name: "Dheeraj Vagavolu", role: "Data Scientist, Ample Insights", desc: "Top 10 Rules for Rebuilding Products with AI. Practical rules for AI product transformation focusing on readiness, data quality, and trust.", linkedin: "https://www.linkedin.com/in/dheerajvagavolu/", tier: "speaker", aws: true, photo: headshotDheeraj, logo: logoAmpleInsights },
-  { name: "Rohini Gaonkar", role: "Solutions Architect, Amazon Web Services", desc: "AWS cloud expert helping customers build scalable and secure solutions.", linkedin: "https://www.linkedin.com/in/rohinigaonkar/", tier: "speaker", aws: true, photo: headshotRohini, logo: awsLogo },
+  { name: "Rohini Gaonkar", role: "Solutions Architect, Amazon Web Services", desc: "Agents Are the New Microservices Problem. Lessons from microservices adoption applied to the new operational challenges of AI agents.", linkedin: "https://www.linkedin.com/in/rohinigaonkar/", tier: "speaker", aws: true, photo: headshotRohini, logo: awsLogo },
   { name: "Rupal Bhatt", role: "Cloud Intelligence", desc: "Selecting the Right Use Case for GenAI. Why the biggest blockers aren't the LLMs — they're choosing the right problems, defining success upfront, and keeping unit costs in check as you scale.", linkedin: "https://www.linkedin.com/in/rupal-bhatt/", tier: "speaker", aws: false, photo: headshotRupal, logo: logoCloudIntelligence },
+  { name: "Vijaya Nirmala Gopal", role: "AWS Community Builder · Solutions Architect, Autodesk", desc: "AWS MCP Server for Infrastructure Drift Analysis. Detect drift, accelerate incident response, and build AI-powered operations with AWS MCP.", linkedin: "https://www.linkedin.com/in/vijayanirmalagopal/", tier: "speaker", aws: true, photo: headshotVijaya, logo: logoAutodesk, logoClass: "rounded-sm" },
+  { name: "Manas Mondal", role: "Managing Principal Enterprise Architect, Capgemini", desc: "Simplifying Cloud Migration: AWS Transform Enables Seamless VMware Exit. A hands-on workshop covering discovery, readiness assessment, and cost optimization.", linkedin: "https://www.linkedin.com/in/manas-mondal-b2b9094", tier: "speaker", aws: true, photo: headshotManas, logo: logoCapgemini },
+  { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
+  { name: "Manoj Selvakumar", role: "GenAI Specialist Solutions Architect, Amazon Web Services", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/manoj-selvakumar/", tier: "speaker", aws: true, photo: headshotManoj, logo: awsLogo },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
+  { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
+
+const DAY_ONE_AGENDA = [
+  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Kira Evan + Opening Speaker" },
+  { time: "4:10–4:30 PM", type: "Keynote", room: "Foundry", title: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity", speaker: "Dr. Mary Gunaratnam" },
+  { time: "4:30–5:00 PM", type: "Talk", room: "Foundry", title: "Building an AI-forward Enterprise Platform Engineering Organization", speaker: "Gautham Pallapa" },
+  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Kira Evan" },
+  { time: "5:50–6:00 PM", type: "Closing", room: "Foundry", title: "Closing Remarks & Tech2Step Walk", speaker: "Garima Bajpai" },
+];
+
+const DAY_TWO_TRACKS = [
+  {
+    room: "Foundry & Big Room",
+    items: [
+      { time: "Before 9:00 AM", type: "Hospitality", room: "Foundry", title: "Breakfast", speaker: "" },
+      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Run of the Show: Opening", speaker: "Kira Evan" },
+      { time: "9:10–9:45 AM", type: "Keynote", room: "Foundry", title: "Keynote", speaker: "John Willis" },
+      { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
+      { time: "10:30–11:00 AM", type: "Talk", room: "Big Room", title: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI", speaker: "Sumit Soni" },
+      { time: "11:00–11:30 AM", type: "Talk", room: "Big Room", title: "Building AI Features That Survive Production", speaker: "Dima Dababneh" },
+      { time: "11:30 AM–12:00 PM", type: "Talk", room: "Foundry", title: "Agents Are the New Microservices Problem", speaker: "Rohini Gaonkar" },
+      { time: "12:00–1:00 PM", type: "Hospitality", room: "All Rooms", title: "Lunch", speaker: "" },
+      { time: "1:00–2:00 PM", type: "Workshop", room: "Big Room", title: "Agentic AI Design Patterns: Build Scalable Agentic Systems Using AWS", speaker: "Amar Dhillon" },
+      { time: "2:00–2:30 PM", type: "Talk", room: "Big Room", title: "Top 10 Rules for Rebuilding Products with AI", speaker: "Dheeraj Vagavolu" },
+      { time: "2:30–3:00 PM", type: "Hospitality", room: "All Rooms", title: "Coffee Break", speaker: "" },
+      { time: "3:00–3:30 PM", type: "Talk", room: "Big Room", title: "Threat Modeling AI-Powered Applications", speaker: "Md Waliullah" },
+      { time: "3:30–4:00 PM", type: "Talk", room: "Big Room", title: "From Code to Context: How AI is Changing Software Development", speaker: "Madeline Webster" },
+      { time: "4:00–4:30 PM", type: "Talk", room: "Big Room", title: "AWS MCP Server for Infrastructure Drift Analysis", speaker: "Vijaya Nirmala Gopal" },
+      { time: "4:00–5:00 PM", type: "Presentations", room: "Foundry", title: "Hackathon Presentations", speaker: "Hackathon Teams" },
+      { time: "5:30–6:00 PM", type: "Closing & Awards", room: "Foundry", title: "Closing Remarks and Awards", speaker: "Garima Bajpai & Aliza Newman" },
+    ],
+  },
+  {
+    room: "L203",
+    items: [
+      { time: "10:00–10:30 AM", type: "Judges", room: "L203", title: "Introduction to the Judges", speaker: "Garima Bajpai" },
+      { time: "10:00–11:30 AM", type: "Workshop", room: "L203", title: "Simplifying Cloud Migration", speaker: "Manas Mondal" },
+      { time: "10:30–11:30 AM", type: "Networking", room: "L203", title: "Judge and Mentor Space", speaker: "Judges & Mentors" },
+      { time: "11:30 AM–12:00 PM", type: "Online Talk", room: "L203", title: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation", speaker: "Daniel Clement" },
+      { time: "5:00–5:30 PM", type: "Judging", room: "L203", title: "Closed-door Judging", speaker: "Judges" },
+    ],
+  },
+  {
+    room: "Rogers Room",
+    items: [
+      { time: "10:00–11:30 AM", type: "Workshop", room: "Rogers Room", title: "Developer-led Workshop: Strands Agents", speaker: "Manoj Selvakumar" },
+      { time: "11:30 AM–12:00 PM", type: "Talk", room: "Rogers Room", title: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer", speaker: "Alexander Rey" },
+      { time: "1:00–2:00 PM", type: "Masterclass", room: "Rogers Room", title: "Agents, AI and Age", speaker: "John Willis" },
+    ],
+  },
+];
+
+type AgendaEntry = (typeof DAY_ONE_AGENDA)[number];
+
+const AgendaEntryCard = ({ item }: { item: AgendaEntry }) => (
+  <article className="grid grid-cols-[6.5rem_1fr] gap-4 rounded-lg border border-border bg-background/40 p-4 transition-smooth hover:border-accent/40">
+    <div>
+      <p className="font-mono text-xs font-semibold text-accent">{item.time}</p>
+      <p className="mt-1 text-[10px] uppercase text-muted-foreground">{item.room}</p>
+    </div>
+    <div className="min-w-0">
+      <span className="inline-block rounded border border-primary/20 bg-primary/10 px-2 py-0.5 font-mono text-[9px] uppercase text-accent">
+        {item.type}
+      </span>
+      <h4 className="mt-2 text-sm font-bold leading-snug md:text-base">{item.title}</h4>
+      {item.speaker && <p className="mt-1 text-xs text-muted-foreground">{item.speaker}</p>}
+    </div>
+  </article>
+);
 
 const GalleryCarousel = () => {
   const [current, setCurrent] = useState(0);
@@ -445,58 +523,44 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
             <span className="font-mono text-xs uppercase tracking-widest text-accent">03 / Agenda</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4">What the days look like.</h2>
-            <p className="text-lg text-muted-foreground mt-4">AWS Community Day (Co-located with DevOps for GenAI Hackathon)</p>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4">Two days. Three rooms. One community.</h2>
+            <p className="text-lg text-muted-foreground mt-4">AWS Community Day, co-located with the DevOps for GenAI Hackathon.</p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-8 text-accent">Day 1 — Friday, August 21</h3>
-            {[
-              { time: "16:00", title: "Kickoff", desc: "Welcome and opening remarks." },
-              { time: "16:15", title: "Keynote", desc: "Setting the stage for the weekend ahead." },
-              { time: "17:00", title: "Community Connect & Refreshments", desc: "Networking, conversations, and light refreshments." },
-              { time: "17:30", title: "Hackathon Starts", desc: "Teams form, problems drop, builds begin. Teams can leave to work on the solution." },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-6 md:gap-10 group">
-                <div className="flex flex-col items-center">
-                  <div className="font-mono text-sm text-accent pt-1">{item.time}</div>
-                  <div className="w-px flex-1 bg-border mt-4 group-last:hidden" />
-                </div>
-                <div className="flex-1 pb-10 group-last:pb-0">
-                  <div className="relative pl-6 border-l border-border -ml-px pl-10">
-                    <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-gradient-primary -translate-x-1/2 ring-4 ring-background" />
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-14">
+              <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-2xl font-bold text-accent">Day 1 · Friday, August 21</h3>
+                <p className="font-mono text-xs uppercase text-muted-foreground">Foundry</p>
               </div>
-            ))}
+              <div className="grid gap-3 md:grid-cols-2">
+                {DAY_ONE_AGENDA.map((item) => (
+                  <AgendaEntryCard key={`${item.time}-${item.title}`} item={item} />
+                ))}
+              </div>
+            </div>
 
-            <h3 className="text-2xl font-bold mb-8 mt-12 text-accent">Day 2 — Saturday, August 22</h3>
-            {[
-              { time: "09:00", title: "Registration & Coffee", desc: "Check in, grab swag, meet fellow builders." },
-              { time: "09:30", title: "Keynote", desc: "Inspiration and insights to kick off day two." },
-              { time: "10:00", title: "Technical Talks — Cloud & DevOps", desc: "Deep dives from practitioners shipping in production." },
-              { time: "12:00", title: "Lunch & Networking", desc: "Conversations that turn into collaborations." },
-              { time: "16:00", title: "Hackathon Demos", desc: "Teams present their solutions to the judges." },
-              { time: "17:00", title: "Hackathon Ends", desc: "Final submissions and wrap-up." },
-              { time: "17:30", title: "Award Ceremony", desc: "Winning teams take the stage." },
-              { time: "18:00", title: "Closing Remarks", desc: "Thank you and see you next year!" },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-6 md:gap-10 group">
-                <div className="flex flex-col items-center">
-                  <div className="font-mono text-sm text-accent pt-1">{item.time}</div>
-                  <div className="w-px flex-1 bg-border mt-4 group-last:hidden" />
-                </div>
-                <div className="flex-1 pb-10 group-last:pb-0">
-                  <div className="relative pl-6 border-l border-border -ml-px pl-10">
-                    <div className="absolute left-0 top-2 w-3 h-3 rounded-full bg-gradient-primary -translate-x-1/2 ring-4 ring-background" />
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
+            <div>
+              <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-2xl font-bold text-accent">Day 2 · Saturday, August 22</h3>
+                <p className="font-mono text-xs uppercase text-muted-foreground">Parallel tracks</p>
               </div>
-            ))}
+              <div className="grid items-start gap-6 lg:grid-cols-3">
+                {DAY_TWO_TRACKS.map((track) => (
+                  <section key={track.room} className="min-w-0">
+                    <div className="mb-3 border-b border-border pb-3">
+                      <h4 className="text-lg font-bold">{track.room}</h4>
+                      <p className="mt-1 text-xs text-muted-foreground">{track.items.length} sessions</p>
+                    </div>
+                    <div className="space-y-3">
+                      {track.items.map((item) => (
+                        <AgendaEntryCard key={`${item.time}-${item.title}`} item={item} />
+                      ))}
+                    </div>
+                  </section>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -725,8 +789,8 @@ const Index = () => {
                 <p className="text-muted-foreground text-[10px] mt-0.5">{speaker.role}</p>
                 <p className="text-muted-foreground/70 text-[10px] mt-1 leading-relaxed">{speaker.desc}</p>
                 {speaker.logo && (
-                  <div className="mt-2 h-5 opacity-70 group-hover:opacity-100 transition-smooth">
-                    <img src={speaker.logo} alt="" className="h-full object-contain" />
+                  <div className={`mt-2 h-5 opacity-70 group-hover:opacity-100 transition-smooth ${speaker.logoContainerClass || ""}`}>
+                    <img src={speaker.logo} alt="" className={`h-full object-contain ${speaker.logoClass || ""}`} />
                   </div>
                 )}
               </a>
@@ -747,8 +811,8 @@ const Index = () => {
                   <p className="text-accent text-xs font-mono mt-0.5">{speaker.role}</p>
                   <p className="text-muted-foreground text-xs mt-2 leading-relaxed">{speaker.desc}</p>
                   {speaker.logo && (
-                    <div className="mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth">
-                      <img src={speaker.logo} alt="" className="h-full object-contain" />
+                    <div className={`mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth ${speaker.logoContainerClass || ""}`}>
+                      <img src={speaker.logo} alt="" className={`h-full object-contain ${speaker.logoClass || ""}`} />
                     </div>
                   )}
                 </a>
@@ -757,14 +821,18 @@ const Index = () => {
                 <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-[#FF9900]/40 bg-[#FF9900]/5 hover:shadow-[0_0_30px_rgba(255,153,0,0.2)] transition-smooth w-[280px] md:w-[300px]">
                   <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
                   <div className="w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_20px_rgba(255,153,0,0.2)] transition-smooth">
-                    <img src={speaker.photo} alt={speaker.name} className="w-full h-full object-cover object-top" />
+                    {speaker.photo ? (
+                      <img src={speaker.photo} alt={speaker.name} className={`w-full h-full object-cover ${speaker.photoPosition || "object-top"}`} />
+                    ) : (
+                      <span className="text-xl font-bold text-[#FF9900]">{speaker.name.split(" ").map((name) => name[0]).join("")}</span>
+                    )}
                   </div>
                   <h4 className="font-bold text-lg group-hover:text-[#FF9900] transition-smooth">{speaker.name}</h4>
                   <p className="text-[#FF9900] text-xs font-mono mt-0.5">{speaker.role}</p>
                   <p className="text-muted-foreground text-xs mt-2 leading-relaxed">{speaker.desc}</p>
                   {speaker.logo && (
-                    <div className="mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth">
-                      <img src={speaker.logo} alt="" className="h-full object-contain" />
+                    <div className={`mt-3 h-6 opacity-60 group-hover:opacity-100 transition-smooth ${speaker.logoContainerClass || ""}`}>
+                      <img src={speaker.logo} alt="" className={`h-full object-contain ${speaker.logoClass || ""}`} />
                     </div>
                   )}
                 </a>
