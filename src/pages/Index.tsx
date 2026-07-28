@@ -38,15 +38,15 @@ import logoClio from "@/assets/logos/Clio_Screenshot 2026-06-06 222910.png";
 import logoScotiaBank from "@/assets/logos/Scotia_bankScreenshot 2026-06-06 223013.png";
 import logoAmpleInsights from "@/assets/logos/Ample_insights_Screenshot 2026-06-06 223112.png";
 import headshotRupal from "@/assets/headshots/SRH0952 - Rupal Bhatt.jpg";
-import headshotManas from "@/assets/headshots/MyPhoto - Manas Kumar Mondal.jpg";
 import headshotAlexander from "@/assets/headshots/IMG_4822 - Alexander Rey.jpeg";
 import headshotManoj from "@/assets/headshots/Manoj_selvakumar1593311470260.jpeg";
 import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
 import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
-import logoCapgemini from "@/assets/logos/new_capgemini-images.jpeg";
 import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x864.png";
 import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
+import logoJci from "@/assets/logos/JCI_Primary (2).png";
+import logoAurelius from "@/assets/logos/aurelius_1.png";
 
 
 const galleryImages = Object.values(
@@ -58,6 +58,7 @@ const COMMUNITY_DAY_LABEL = "Community Day";
 const HACK_URL = "https://communityhackathons.com";
 const VENUE = "Invest Ottawa, 7 Bayview Rd, Ottawa, ON";
 const EVENT_DATE = "August 21–22, 2026";
+const FULL_STACK_URL = "https://www.youtube.com/watch_videos?video_ids=8aHXhAlylQc&type=0&title=The+Full+Stack+%E2%80%94%C2%A0it%27s+about+more+than+frontend+%26+backend+%E2%80%A2+Season+1";
 
 const SPONSOR_DECK_URL = "/sponsor-deck.pdf";
 const VOLUNTEER_FORM_URL = "https://forms.gle/YnbVmSmUGpV6PoFq6";
@@ -78,7 +79,6 @@ const SPEAKERS = [
   { name: "Rohini Gaonkar", role: "Solutions Architect, Amazon Web Services", desc: "Agents Are the New Microservices Problem. Lessons from microservices adoption applied to the new operational challenges of AI agents.", linkedin: "https://www.linkedin.com/in/rohinigaonkar/", tier: "speaker", aws: true, photo: headshotRohini, logo: awsLogo },
   { name: "Rupal Bhatt", role: "Cloud Intelligence", desc: "Selecting the Right Use Case for GenAI. Why the biggest blockers aren't the LLMs — they're choosing the right problems, defining success upfront, and keeping unit costs in check as you scale.", linkedin: "https://www.linkedin.com/in/rupal-bhatt/", tier: "speaker", aws: false, photo: headshotRupal, logo: logoCloudIntelligence },
   { name: "Vijaya Nirmala Gopal", role: "AWS Community Builder · Solutions Architect, Autodesk", desc: "AWS MCP Server for Infrastructure Drift Analysis. Detect drift, accelerate incident response, and build AI-powered operations with AWS MCP.", linkedin: "https://www.linkedin.com/in/vijayanirmalagopal/", tier: "speaker", aws: true, photo: headshotVijaya, logo: logoAutodesk, logoClass: "rounded-sm" },
-  { name: "Manas Mondal", role: "Managing Principal Enterprise Architect, Capgemini", desc: "Simplifying Cloud Migration: AWS Transform Enables Seamless VMware Exit. A hands-on workshop covering discovery, readiness assessment, and cost optimization.", linkedin: "https://www.linkedin.com/in/manas-mondal-b2b9094", tier: "speaker", aws: true, photo: headshotManas, logo: logoCapgemini },
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
   { name: "Manoj Selvakumar", role: "GenAI Specialist Solutions Architect, Amazon Web Services", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/manoj-selvakumar/", tier: "speaker", aws: true, photo: headshotManoj, logo: awsLogo },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
@@ -119,7 +119,8 @@ const DAY_TWO_TRACKS = [
     room: "L203",
     items: [
       { time: "10:00–10:30 AM", type: "Judges", room: "L203", title: "Introduction to the Judges", speaker: "Garima Bajpai" },
-      { time: "10:00–11:30 AM", type: "Workshop", room: "L203", title: "Simplifying Cloud Migration", speaker: "Manas Mondal" },
+      { time: "10:00–10:30 AM", type: "Talk", room: "L203", title: "Selecting the Right Use Case for GenAI", speaker: "Rupal Bhatt" },
+      { time: "10:30–11:30 AM", type: "Watch Party", room: "L203", title: "The Full Stack: A Reality TV Series for Developers", speaker: "Hosted by Kelsey Hightower · CodeTV · Presented by AWS · Featuring Brian Hough" },
       { time: "10:30–11:30 AM", type: "Networking", room: "L203", title: "Judge and Mentor Space", speaker: "Judges & Mentors" },
       { time: "11:30 AM–12:00 PM", type: "Online Talk", room: "L203", title: "From Threat to Guardian: Building Agentic AI on AWS to Combat Online Exploitation", speaker: "Daniel Clement" },
       { time: "5:00–5:30 PM", type: "Judging", room: "L203", title: "Closed-door Judging", speaker: "Judges" },
@@ -130,7 +131,7 @@ const DAY_TWO_TRACKS = [
     items: [
       { time: "10:00–11:30 AM", type: "Workshop", room: "Rogers Room", title: "Developer-led Workshop: Strands Agents", speaker: "Manoj Selvakumar" },
       { time: "11:30 AM–12:00 PM", type: "Talk", room: "Rogers Room", title: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer", speaker: "Alexander Rey" },
-      { time: "1:00–2:00 PM", type: "Masterclass", room: "Rogers Room", title: "Agents, AI and Age", speaker: "John Willis" },
+      { time: "1:00–4:00 PM", type: "Masterclass", room: "Rogers Room", title: "Agents, AI and Age", speaker: "John Willis" },
     ],
   },
 ];
@@ -149,6 +150,11 @@ const AgendaEntryCard = ({ item }: { item: AgendaEntry }) => (
       </span>
       <h4 className="mt-2 text-sm font-bold leading-snug md:text-base">{item.title}</h4>
       {item.speaker && <p className="mt-1 text-xs text-muted-foreground">{item.speaker}</p>}
+      {item.title === "The Full Stack: A Reality TV Series for Developers" && (
+        <a href={FULL_STACK_URL} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline">
+          Watch on CodeTV <ArrowRight className="h-3 w-3" />
+        </a>
+      )}
     </div>
   </article>
 );
@@ -172,7 +178,7 @@ const GalleryCarousel = () => {
     <section id="gallery" className="py-24 md:py-32 bg-gradient-surface">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mb-16">
-          <span className="font-mono text-xs uppercase tracking-widest text-accent">05 / Gallery</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-accent">06 / Gallery</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4">Moments from past events.</h2>
           <p className="text-lg text-muted-foreground mt-4">A look back at the energy, collaboration, and community spirit from our previous gatherings.</p>
         </div>
@@ -246,9 +252,9 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-smooth">About</a>
             <a href="#tracks" className="hover:text-foreground transition-smooth">Tracks</a>
+            <a href="#masterclass" className="hover:text-accent transition-smooth text-accent/80 font-medium">Masterclass</a>
             <a href="#agenda" className="hover:text-foreground transition-smooth">Agenda</a>
             <a href="#experience" className="hover:text-foreground transition-smooth">Experience</a>
-            <a href="#masterclass" className="hover:text-accent transition-smooth text-accent/80 font-medium">Masterclass</a>
             <a href="#gallery" className="hover:text-foreground transition-smooth">Gallery</a>
             <a href="#speakers" className="hover:text-foreground transition-smooth">Speakers</a>
             <a href="#founders" className="hover:text-foreground transition-smooth">Founders</a>
@@ -518,11 +524,55 @@ const Index = () => {
         </div>
       </section>
 
+      {/* MASTERCLASS */}
+      <section id="masterclass" className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-primary/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px]" />
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="mb-4 font-mono text-xs uppercase tracking-widest text-accent">03 / Masterclass</p>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm mb-6">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="font-mono text-xs uppercase tracking-widest text-accent">Exclusive · Limited Seats</span>
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold">Masterclass</h2>
+              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Agents with John Willis · 1:00–4:00 PM</p>
+            </div>
+
+            <div className="p-8 md:p-12 rounded-3xl border border-accent/40 bg-background/50 backdrop-blur-sm shadow-[0_0_60px_rgba(146,119,255,0.1)]">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="shrink-0">
+                  <div className="w-32 h-32 rounded-2xl border-2 border-accent/50 overflow-hidden shadow-[0_0_30px_rgba(146,119,255,0.2)]">
+                    <img src={headshotJohn} alt="John Willis" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <p className="text-center font-bold text-sm mt-3">John Willis</p>
+                  <p className="text-center text-muted-foreground text-[10px]">Co-Author, The DevOps Handbook</p>
+                </div>
+                <div className="flex-1">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    An exclusive deep-dive masterclass by John Willis — co-author of The DevOps Handbook and pioneer of the DevOps movement. Explore the synergy between Generative AI, Agentic workflows, and Deming's principles of transformation.
+                  </p>
+                  <p className="text-sm text-muted-foreground/70 mb-6">
+                    ⚠️ This is a separate ticket — not included with the AWS Community Day or Hackathon registration.
+                  </p>
+                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 h-14 px-8 shadow-glow animate-pulse-glow">
+                    <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
+                      Get Masterclass Ticket <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AGENDA */}
       <section id="agenda" className="py-24 md:py-32 bg-gradient-surface">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">03 / Agenda</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">04 / Agenda</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">Two days. Three rooms. One community.</h2>
             <p className="text-lg text-muted-foreground mt-4">AWS Community Day, co-located with the DevOps for GenAI Hackathon.</p>
           </div>
@@ -569,7 +619,7 @@ const Index = () => {
       <section id="experience" className="py-24 md:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">04 / Experience</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">05 / Experience</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">More than talks. A full experience.</h2>
           </div>
 
@@ -593,49 +643,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* MASTERCLASS */}
-      <section id="masterclass" className="py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-primary/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px]" />
-        <div className="container mx-auto px-6 relative">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm mb-6">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="font-mono text-xs uppercase tracking-widest text-accent">Exclusive · Limited Seats</span>
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold">Masterclass</h2>
-              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Agents with John Willis</p>
-            </div>
-
-            <div className="p-8 md:p-12 rounded-3xl border border-accent/40 bg-background/50 backdrop-blur-sm shadow-[0_0_60px_rgba(146,119,255,0.1)]">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="shrink-0">
-                  <div className="w-32 h-32 rounded-2xl border-2 border-accent/50 overflow-hidden shadow-[0_0_30px_rgba(146,119,255,0.2)]">
-                    <img src={headshotJohn} alt="John Willis" className="w-full h-full object-cover object-top" />
-                  </div>
-                  <p className="text-center font-bold text-sm mt-3">John Willis</p>
-                  <p className="text-center text-muted-foreground text-[10px]">Co-Author, The DevOps Handbook</p>
-                </div>
-                <div className="flex-1">
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                    An exclusive deep-dive masterclass by John Willis — co-author of The DevOps Handbook and pioneer of the DevOps movement. Explore the synergy between Generative AI, Agentic workflows, and Deming's principles of transformation.
-                  </p>
-                  <p className="text-sm text-muted-foreground/70 mb-6">
-                    ⚠️ This is a separate ticket — not included with the AWS Community Day or Hackathon registration.
-                  </p>
-                  <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 border-0 h-14 px-8 shadow-glow animate-pulse-glow">
-                    <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
-                      Get Masterclass Ticket <ArrowRight className="ml-2 w-5 h-5" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* GALLERY */}
       <GalleryCarousel />
 
@@ -644,7 +651,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">06 / Sponsors</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">07 / Sponsors</span>
               <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Our sponsors & partners.</h2>
             </div>
 
@@ -658,13 +665,16 @@ const Index = () => {
                 </div>
             </div>
 
-            {/* Silver Partner */}
+            {/* Silver Sponsors */}
             <div className="mb-10">
-                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Silver Partner</p>
-                <div className="flex justify-center">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Silver Sponsors</p>
+                <div className="flex flex-wrap items-center justify-center gap-8">
                   <a href="https://cycode.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoCycode} alt="Cycode" className="h-10 object-contain" />
                   </a>
+                  <div className="rounded bg-white px-4 py-2">
+                    <img src={logoJci} alt="JCI Ottawa" className="h-16 w-28 object-cover object-center" />
+                  </div>
                 </div>
             </div>
 
@@ -678,6 +688,16 @@ const Index = () => {
                   <a href="https://crowdbytesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoCrowdbyte} alt="Crowdbyte Solutions" className="h-14 object-contain" />
                   </a>
+                </div>
+            </div>
+
+            {/* Community Sponsor */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Community Sponsor</p>
+                <div className="flex justify-center">
+                  <div className="rounded bg-white px-5 py-3">
+                    <img src={logoAurelius} alt="Aurelius" className="h-10 w-52 object-cover object-center" />
+                  </div>
                 </div>
             </div>
 
@@ -766,7 +786,7 @@ const Index = () => {
       <section id="speakers" className="py-24 md:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
-            <span className="font-mono text-xs uppercase tracking-widest text-accent">07 / Speakers</span>
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">08 / Speakers</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">Learn from the best.</h2>
             <p className="text-lg text-muted-foreground mt-4">Industry leaders and community experts sharing real-world insights on AWS, DevOps, and GenAI.</p>
           </div>
