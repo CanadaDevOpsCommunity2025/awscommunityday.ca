@@ -47,6 +47,7 @@ import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x
 import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
 import logoJci from "@/assets/logos/JCI_Primary (2).png";
 import logoAurelius from "@/assets/logos/aurelius_1.png";
+import logoRedHat from "@/assets/logos/Logo-Red_Hat-C-Standard-RGB.Large_logo.jpeg";
 
 
 const galleryImages = Object.values(
@@ -131,7 +132,7 @@ const DAY_TWO_TRACKS = [
     items: [
       { time: "10:00–11:30 AM", type: "Workshop", room: "Rogers Room", title: "Developer-led Workshop: Strands Agents", speaker: "Manoj Selvakumar" },
       { time: "11:30 AM–12:00 PM", type: "Talk", room: "Rogers Room", title: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer", speaker: "Alexander Rey" },
-      { time: "1:00–4:00 PM", type: "Masterclass", room: "Rogers Room", title: "Agents, AI and Age", speaker: "John Willis" },
+      { time: "1:00–4:00 PM", type: "Masterclass", room: "Rogers Room", title: "DevOps, AI and Age", speaker: "John Willis" },
     ],
   },
 ];
@@ -329,7 +330,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="text-base h-14 px-8 bg-accent/10 backdrop-blur-sm border border-accent/40 hover:bg-accent/20 hover:border-accent/70 hover:shadow-[0_0_25px_rgba(146,119,255,0.25)] transition-all duration-300">
                   <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
-                    <Sparkles className="mr-2 w-5 h-5 text-accent" /> Masterclass - DevOps, AI, and Agents with John Willis <ArrowRight className="ml-2 w-5 h-5" />
+                    <Sparkles className="mr-2 w-5 h-5 text-accent" /> Masterclass - DevOps, AI, and Age with John Willis <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </div>
@@ -537,7 +538,7 @@ const Index = () => {
                 <span className="font-mono text-xs uppercase tracking-widest text-accent">Exclusive · Limited Seats</span>
               </span>
               <h2 className="text-4xl md:text-5xl font-bold">Masterclass</h2>
-              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Agents with John Willis · 1:00–4:00 PM</p>
+              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Age with John Willis · 1:00–4:00 PM</p>
             </div>
 
             <div className="p-8 md:p-12 rounded-3xl border border-accent/40 bg-background/50 backdrop-blur-sm shadow-[0_0_60px_rgba(146,119,255,0.1)]">
@@ -665,6 +666,16 @@ const Index = () => {
                 </div>
             </div>
 
+            {/* Gold Sponsors */}
+            <div className="mb-10">
+                <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Gold Sponsor</p>
+                <div className="flex justify-center">
+                  <a href="https://www.redhat.com" target="_blank" rel="noopener noreferrer" className="rounded bg-white px-7 py-4 hover:opacity-80 transition-smooth">
+                    <img src={logoRedHat} alt="Red Hat" className="h-24 w-48 object-contain" />
+                  </a>
+                </div>
+            </div>
+
             {/* Silver Sponsors */}
             <div className="mb-10">
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Silver Sponsors</p>
@@ -706,7 +717,9 @@ const Index = () => {
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Community Partners</p>
                 <div className="flex flex-wrap justify-center gap-8 items-center">
                   <a href="https://www.algonquincollege.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoAlgonquin} alt="Algonquin College" className="h-16 object-contain brightness-[3]" />
+                    <span className="flex h-12 w-40 items-center justify-center overflow-hidden">
+                      <img src={logoAlgonquin} alt="Algonquin College" className="w-64 max-w-none brightness-0 invert" />
+                    </span>
                   </a>
                   <a href="https://www.wct-fct.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
                     <img src={logoWct} alt="WCT" className="h-9 object-contain invert" />
