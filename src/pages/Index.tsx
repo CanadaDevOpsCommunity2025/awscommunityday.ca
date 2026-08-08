@@ -39,7 +39,8 @@ import logoScotiaBank from "@/assets/logos/Scotia_bankScreenshot 2026-06-06 2230
 import logoAmpleInsights from "@/assets/logos/Ample_insights_Screenshot 2026-06-06 223112.png";
 import headshotRupal from "@/assets/headshots/SRH0952 - Rupal Bhatt.jpg";
 import headshotAlexander from "@/assets/headshots/IMG_4822 - Alexander Rey.jpeg";
-import headshotManoj from "@/assets/headshots/Manoj_selvakumar1593311470260.jpeg";
+import headshotAlbert from "@/assets/headshots/Alber_zhao.jpeg";
+import headshotNicholas from "@/assets/headshots/52885328476_d88de56268_o_Original - Nicholas Morey.jpg";
 import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
 import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
@@ -81,7 +82,8 @@ const SPEAKERS = [
   { name: "Rupal Bhatt", role: "Cloud Intelligence", desc: "Selecting the Right Use Case for GenAI. Why the biggest blockers aren't the LLMs — they're choosing the right problems, defining success upfront, and keeping unit costs in check as you scale.", linkedin: "https://www.linkedin.com/in/rupal-bhatt/", tier: "speaker", aws: false, photo: headshotRupal, logo: logoCloudIntelligence },
   { name: "Vijaya Nirmala Gopal", role: "AWS Community Builder · Solutions Architect, Autodesk", desc: "AWS MCP Server for Infrastructure Drift Analysis. Detect drift, accelerate incident response, and build AI-powered operations with AWS MCP.", linkedin: "https://www.linkedin.com/in/vijayanirmalagopal/", tier: "speaker", aws: true, photo: headshotVijaya, logo: logoAutodesk, logoClass: "rounded-sm" },
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
-  { name: "Manoj Selvakumar", role: "GenAI Specialist Solutions Architect, Amazon Web Services", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/manoj-selvakumar/", tier: "speaker", aws: true, photo: headshotManoj, logo: awsLogo },
+  { name: "Nicholas Morey", role: "Red Hat", desc: "From Agentic Development to Production on OpenShift. Explore spec-driven development with Kiro, secure workspaces in OpenShift Dev Spaces, and scalable deployment on Red Hat OpenShift Service.", linkedin: "https://www.linkedin.com/in/nicholas-morey/", tier: "speaker", aws: false, photo: headshotNicholas, logo: logoRedHat, logoContainerClass: "rounded-sm bg-white px-2" },
+  { name: "Albert Zhao", role: "Developer Advocate, Amazon Web Services", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/albert-zhao-49b62a129/", tier: "speaker", aws: true, photo: headshotAlbert, logo: awsLogo },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
   { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
@@ -101,6 +103,7 @@ const DAY_TWO_TRACKS = [
       { time: "Before 9:00 AM", type: "Hospitality", room: "Foundry", title: "Breakfast", speaker: "" },
       { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Run of the Show: Opening", speaker: "Kira Evan" },
       { time: "9:10–9:45 AM", type: "Keynote", room: "Foundry", title: "Keynote", speaker: "John Willis" },
+      { time: "10:00–10:30 AM", type: "Sponsor Talk", room: "Foundry", title: "From Agentic Development to Production on OpenShift", speaker: "Nicholas Morey" },
       { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
       { time: "10:30–11:00 AM", type: "Talk", room: "Big Room", title: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI", speaker: "Sumit Soni" },
       { time: "11:00–11:30 AM", type: "Talk", room: "Big Room", title: "Building AI Features That Survive Production", speaker: "Dima Dababneh" },
@@ -130,9 +133,9 @@ const DAY_TWO_TRACKS = [
   {
     room: "Rogers Room",
     items: [
-      { time: "10:00–11:30 AM", type: "Workshop", room: "Rogers Room", title: "Developer-led Workshop: Strands Agents", speaker: "Manoj Selvakumar" },
+      { time: "10:00–11:30 AM", type: "Workshop", room: "Rogers Room", title: "Developer-led Workshop: Strands Agents", speaker: "Albert Zhao" },
       { time: "11:30 AM–12:00 PM", type: "Talk", room: "Rogers Room", title: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer", speaker: "Alexander Rey" },
-      { time: "1:00–4:00 PM", type: "Masterclass", room: "Rogers Room", title: "DevOps, AI and Age", speaker: "John Willis" },
+      { time: "1:00–4:00 PM", type: "Masterclass", room: "Rogers Room", title: "DevOps, AI and Agents", speaker: "John Willis" },
     ],
   },
 ];
@@ -330,7 +333,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="text-base h-14 px-8 bg-accent/10 backdrop-blur-sm border border-accent/40 hover:bg-accent/20 hover:border-accent/70 hover:shadow-[0_0_25px_rgba(146,119,255,0.25)] transition-all duration-300">
                   <a href="https://www.eventbrite.com/e/masterclass-devops-ai-and-agents-with-john-willis-tickets-1993440231394" target="_blank" rel="noopener noreferrer">
-                    <Sparkles className="mr-2 w-5 h-5 text-accent" /> Masterclass - DevOps, AI, and Age with John Willis <ArrowRight className="ml-2 w-5 h-5" />
+                    <Sparkles className="mr-2 w-5 h-5 text-accent" /> Masterclass - DevOps, AI, and Agents with John Willis <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </div>
@@ -538,7 +541,7 @@ const Index = () => {
                 <span className="font-mono text-xs uppercase tracking-widest text-accent">Exclusive · Limited Seats</span>
               </span>
               <h2 className="text-4xl md:text-5xl font-bold">Masterclass</h2>
-              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Age with John Willis · 1:00–4:00 PM</p>
+              <p className="text-lg text-muted-foreground mt-4">DevOps, AI & Agents with John Willis · 1:00–4:00 PM</p>
             </div>
 
             <div className="p-8 md:p-12 rounded-3xl border border-accent/40 bg-background/50 backdrop-blur-sm shadow-[0_0_60px_rgba(146,119,255,0.1)]">
