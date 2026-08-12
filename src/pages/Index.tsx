@@ -49,6 +49,7 @@ import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
 import logoJci from "@/assets/logos/JCI_Primary (2).png";
 import logoAurelius from "@/assets/logos/aurelius_1.png";
 import logoRedHat from "@/assets/logos/Logo-Red_Hat-C-Standard-RGB.Large_logo.jpeg";
+import logoDryRun from "@/assets/logos/Dry_run_images.png";
 
 
 const galleryImages = Object.values(
@@ -107,7 +108,8 @@ const DAY_TWO_TRACKS = [
       { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
       { time: "10:30–11:00 AM", type: "Talk", room: "Big Room", title: "AI-Driven DevSecOps: Transforming Enterprise Security with Agentic AI", speaker: "Sumit Soni" },
       { time: "11:00–11:30 AM", type: "Talk", room: "Big Room", title: "Building AI Features That Survive Production", speaker: "Dima Dababneh" },
-      { time: "11:30 AM–12:00 PM", type: "Talk", room: "Foundry", title: "Agents Are the New Microservices Problem", speaker: "Rohini Gaonkar" },
+      { time: "11:30 AM–12:00 PM", type: "Talk", room: "Big Room", title: "Agents Are the New Microservices Problem", speaker: "Rohini Gaonkar" },
+      { time: "11:30 AM–12:00 PM", type: "Talk", room: "Foundry", title: "Revolutionizing Construction with AI", speaker: "Ahmad Alkfri, Senior Software Developer, Cavtera" },
       { time: "12:00–1:00 PM", type: "Hospitality", room: "All Rooms", title: "Lunch", speaker: "" },
       { time: "1:00–2:00 PM", type: "Workshop", room: "Big Room", title: "Agentic AI Design Patterns: Build Scalable Agentic Systems Using AWS", speaker: "Amar Dhillon" },
       { time: "2:00–2:30 PM", type: "Talk", room: "Big Room", title: "Top 10 Rules for Rebuilding Products with AI", speaker: "Dheeraj Vagavolu" },
@@ -672,9 +674,12 @@ const Index = () => {
             {/* Gold Sponsors */}
             <div className="mb-10">
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Gold Sponsor</p>
-                <div className="flex justify-center">
+                <div className="flex flex-wrap items-center justify-center gap-8">
                   <a href="https://www.redhat.com" target="_blank" rel="noopener noreferrer" className="rounded bg-white px-7 py-4 hover:opacity-80 transition-smooth">
                     <img src={logoRedHat} alt="Red Hat" className="h-24 w-48 object-contain" />
+                  </a>
+                  <a href="https://www.dryrun.security/" target="_blank" rel="noopener noreferrer" className="rounded bg-white px-5 py-4 hover:opacity-80 transition-smooth">
+                    <img src={logoDryRun} alt="DryRun Security" className="h-20 w-48 object-contain" />
                   </a>
                 </div>
             </div>
