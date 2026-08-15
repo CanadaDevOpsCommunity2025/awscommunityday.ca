@@ -50,6 +50,7 @@ import logoJci from "@/assets/logos/JCI_Primary (2).png";
 import logoAurelius from "@/assets/logos/aurelius_1.png";
 import logoRedHat from "@/assets/logos/Logo-Red_Hat-C-Standard-RGB.Large_logo.jpeg";
 import logoDryRun from "@/assets/logos/Dry_run_images.png";
+import logoCavtera from "@/assets/logos/Cavtera-Horizontal-Normal.jpg";
 
 
 const galleryImages = Object.values(
@@ -680,6 +681,9 @@ const Index = () => {
                   </a>
                   <a href="https://www.dryrun.security/" target="_blank" rel="noopener noreferrer" className="rounded bg-white px-5 py-4 hover:opacity-80 transition-smooth">
                     <img src={logoDryRun} alt="DryRun Security" className="h-20 w-48 object-contain" />
+                  </a>
+                  <a href="https://cavtera.com/" target="_blank" rel="noopener noreferrer" className="rounded bg-white px-5 py-4 hover:opacity-80 transition-smooth">
+                    <img src={logoCavtera} alt="Cavtera" className="h-20 w-48 object-contain" />
                   </a>
                 </div>
             </div>
