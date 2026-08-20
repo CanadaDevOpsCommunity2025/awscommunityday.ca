@@ -43,6 +43,7 @@ import headshotAlbert from "@/assets/headshots/Alber_zhao.jpeg";
 import headshotNicholas from "@/assets/headshots/52885328476_d88de56268_o_Original - Nicholas Morey.jpg";
 import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
 import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
+import headshotKira from "@/assets/headshots/Kira_Evans_MG_2604.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
 import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x864.png";
 import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
@@ -86,15 +87,16 @@ const SPEAKERS = [
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
   { name: "Nicholas Morey", role: "Red Hat", desc: "From Agentic Development to Production on OpenShift. Explore spec-driven development with Kiro, secure workspaces in OpenShift Dev Spaces, and scalable deployment on Red Hat OpenShift Service.", linkedin: "https://www.linkedin.com/in/nicholas-morey/", tier: "speaker", aws: false, photo: headshotNicholas, logo: logoRedHat, logoContainerClass: "rounded-sm bg-white px-2" },
   { name: "Albert Zhao", role: "Developer Experience Engineer", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/albert-zhao-49b62a129/", tier: "speaker", aws: true, photo: headshotAlbert, logo: awsLogo },
+  { name: "Kira Evans", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "speaker", aws: false, photo: headshotKira, logo: "", photoPosition: "object-[center_38%]" },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
   { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
 
 const DAY_ONE_AGENDA = [
-  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Kira Evan + Opening Speaker" },
+  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Kira Evans + Opening Speaker" },
   { time: "4:10–4:30 PM", type: "Keynote", room: "Foundry", title: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity", speaker: "Dr. Mary Gunaratnam" },
   { time: "4:30–5:00 PM", type: "Talk", room: "Foundry", title: "Building an AI-forward Enterprise Platform Engineering Organization", speaker: "Gautham Pallapa" },
-  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Kira Evan" },
+  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Kira Evans" },
   { time: "5:50–6:00 PM", type: "Closing", room: "Foundry", title: "Closing Remarks & Tech2Step Walk", speaker: "Garima Bajpai" },
 ];
 
@@ -103,7 +105,7 @@ const DAY_TWO_TRACKS = [
     room: "Foundry & Big Room",
     items: [
       { time: "Before 9:00 AM", type: "Hospitality", room: "Foundry", title: "Breakfast", speaker: "" },
-      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Run of the Show: Opening", speaker: "Kira Evan" },
+      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Opening Remarks", speaker: "Kira Evans and Nira" },
       { time: "9:10–9:45 AM", type: "Keynote", room: "Foundry", title: "Keynote", speaker: "John Willis" },
       { time: "10:00–10:30 AM", type: "Sponsor Talk", room: "Foundry", title: "From Agentic Development to Production on OpenShift", speaker: "Nicholas Morey" },
       { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
@@ -692,11 +694,11 @@ const Index = () => {
             <div className="mb-10">
                 <p className="text-center font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">Silver Sponsors</p>
                 <div className="flex flex-wrap items-center justify-center gap-8">
-                  <a href="https://cycode.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-smooth">
-                    <img src={logoCycode} alt="Cycode" className="h-10 object-contain" />
+                  <a href="https://cycode.com" target="_blank" rel="noopener noreferrer" className="flex h-20 w-40 items-center justify-center rounded bg-white p-3 hover:opacity-80 transition-smooth">
+                    <img src={logoCycode} alt="Cycode" className="max-h-full max-w-full object-contain" />
                   </a>
-                  <div className="rounded bg-white px-4 py-2">
-                    <img src={logoJci} alt="JCI Ottawa" className="h-16 w-28 object-cover object-center" />
+                  <div className="flex h-20 w-40 items-center justify-center overflow-hidden rounded bg-white p-3">
+                    <img src={logoJci} alt="JCI Ottawa" className="h-full w-full object-cover object-center" />
                   </div>
                 </div>
             </div>
