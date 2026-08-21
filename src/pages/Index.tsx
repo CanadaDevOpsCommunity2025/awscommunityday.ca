@@ -70,7 +70,7 @@ const VOLUNTEER_FORM_URL = "https://forms.gle/YnbVmSmUGpV6PoFq6";
 const SPONSOR_CONTACT_EMAIL = "info@capitalcarbonconsulting.com";
 
 const SPEAKERS = [
-  { name: "Nira Dookeran", role: "Land Acknowledgement · Green Party Community Leader", desc: "An Ottawa educator, community organizer, and former federal and provincial Green candidate, Nira has advocated for sustainability, justice, diversity, and grassroots democracy. She opens Day 2 with a Land Acknowledgement.", linkedin: "https://gpo.ca/2025/02/02/nira-dookeran-nominated-as-ontario-greens-candidate-in-ottawa-south/", tier: "acknowledgement", aws: false, photo: headshotNira, logo: "", photoPosition: "object-top" },
+  { name: "Nira Dookeran", role: "Land Acknowledgement · Green Party Community Leader", desc: "An Ottawa educator, community organizer, and former federal and provincial Green candidate, Nira has advocated for sustainability, justice, diversity, and grassroots democracy.", linkedin: "https://gpo.ca/2025/02/02/nira-dookeran-nominated-as-ontario-greens-candidate-in-ottawa-south/", tier: "acknowledgement", aws: false, photo: headshotNira, logo: "", photoPosition: "object-top" },
   { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "speaker", aws: false, photo: headshotMary, logo: logoNorthernCU },
   { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "speaker", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
   { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "speaker", aws: true, photo: headshotAmar, logo: logoAirCanada },
@@ -821,12 +821,12 @@ const Index = () => {
 
           {/* Featured Land Acknowledgement */}
           {SPEAKERS.filter(s => s.tier === "acknowledgement").map((speaker, i) => (
-            <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group mb-12 grid max-w-5xl overflow-hidden rounded-2xl border border-accent/40 bg-accent/5 transition-smooth hover:shadow-glow md:grid-cols-[220px_1fr]">
-              <div className="aspect-[4/3] overflow-hidden md:aspect-auto md:min-h-[260px]">
+            <a key={i} href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="group mx-auto mb-12 flex max-w-md flex-col items-center rounded-2xl border border-accent/40 bg-accent/5 p-7 text-center transition-smooth hover:shadow-glow md:p-9">
+              <div className="h-32 w-32 overflow-hidden rounded-full border-2 border-accent/50 shadow-[0_0_24px_rgba(146,119,255,0.2)]">
                 <img src={speaker.photo} alt={speaker.name} className={`h-full w-full object-cover ${speaker.photoPosition || "object-top"}`} />
               </div>
-              <div className="flex flex-col justify-center p-7 md:p-9">
-                <span className="font-mono text-xs uppercase tracking-widest text-accent">Day 2 Opening</span>
+              <div className="mt-5 flex flex-col items-center">
+                <span className="font-mono text-xs uppercase tracking-widest text-accent">Land Acknowledgement</span>
                 <h3 className="mt-3 text-2xl font-bold transition-smooth group-hover:text-accent md:text-3xl">{speaker.name}</h3>
                 <p className="mt-2 text-base font-medium text-accent">{speaker.role}</p>
                 <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">{speaker.desc}</p>
