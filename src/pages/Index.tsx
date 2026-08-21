@@ -43,6 +43,7 @@ import headshotAlbert from "@/assets/headshots/Alber_zhao.jpeg";
 import headshotNicholas from "@/assets/headshots/52885328476_d88de56268_o_Original - Nicholas Morey.jpg";
 import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
 import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
+import headshotNira from "@/assets/headshots/Nira_MG_2604.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
 import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x864.png";
 import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
@@ -86,7 +87,7 @@ const SPEAKERS = [
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
   { name: "Nicholas Morey", role: "Red Hat", desc: "From Agentic Development to Production on OpenShift. Explore spec-driven development with Kiro, secure workspaces in OpenShift Dev Spaces, and scalable deployment on Red Hat OpenShift Service.", linkedin: "https://www.linkedin.com/in/nicholas-morey/", tier: "speaker", aws: false, photo: headshotNicholas, logo: logoRedHat, logoContainerClass: "rounded-sm bg-white px-2" },
   { name: "Albert Zhao", role: "Developer Experience Engineer", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/albert-zhao-49b62a129/", tier: "speaker", aws: true, photo: headshotAlbert, logo: awsLogo },
-  { name: "Nira Dookeran", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: "", logo: "" },
+  { name: "Nira Dookeran", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: headshotNira, logo: "", photoPosition: "object-[center_38%]" },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
   { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
