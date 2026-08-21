@@ -43,7 +43,6 @@ import headshotAlbert from "@/assets/headshots/Alber_zhao.jpeg";
 import headshotNicholas from "@/assets/headshots/52885328476_d88de56268_o_Original - Nicholas Morey.jpg";
 import headshotVijaya from "@/assets/headshots/VijayanirmalaGopal-HeadShot - Vijaya Nirmala Gopal.jpg";
 import headshotAliza from "@/assets/headshots/IMG_5293 - Aliza.jpeg";
-import headshotKira from "@/assets/headshots/Kira_Evans_MG_2604.jpeg";
 import logoCloudIntelligence from "@/assets/logos/cloud-intelligence.webp";
 import logoGovernmentCanada from "@/assets/logos/Government-of-Canada-logo-1536x864.png";
 import logoAutodesk from "@/assets/logos/autodesk-logo.jpg";
@@ -87,16 +86,16 @@ const SPEAKERS = [
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
   { name: "Nicholas Morey", role: "Red Hat", desc: "From Agentic Development to Production on OpenShift. Explore spec-driven development with Kiro, secure workspaces in OpenShift Dev Spaces, and scalable deployment on Red Hat OpenShift Service.", linkedin: "https://www.linkedin.com/in/nicholas-morey/", tier: "speaker", aws: false, photo: headshotNicholas, logo: logoRedHat, logoContainerClass: "rounded-sm bg-white px-2" },
   { name: "Albert Zhao", role: "Developer Experience Engineer", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/albert-zhao-49b62a129/", tier: "speaker", aws: true, photo: headshotAlbert, logo: awsLogo },
-  { name: "Kira Evans", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: headshotKira, logo: "", photoPosition: "object-[center_38%]" },
+  { name: "Nira Dookeran", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: "", logo: "" },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
   { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
 
 const DAY_ONE_AGENDA = [
-  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Kira Evans + Opening Speaker" },
+  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Nira Dookeran + Opening Speaker" },
   { time: "4:10–4:30 PM", type: "Keynote", room: "Foundry", title: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity", speaker: "Dr. Mary Gunaratnam" },
   { time: "4:30–5:00 PM", type: "Talk", room: "Foundry", title: "Building an AI-forward Enterprise Platform Engineering Organization", speaker: "Gautham Pallapa" },
-  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Kira Evans" },
+  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Nira Dookeran" },
   { time: "5:50–6:00 PM", type: "Closing", room: "Foundry", title: "Closing Remarks & Tech2Step Walk", speaker: "Garima Bajpai" },
 ];
 
@@ -105,7 +104,7 @@ const DAY_TWO_TRACKS = [
     room: "Foundry & Big Room",
     items: [
       { time: "Before 9:00 AM", type: "Hospitality", room: "Foundry", title: "Breakfast", speaker: "" },
-      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Opening Remarks", speaker: "Kira Evans and Nira" },
+      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Opening Remarks", speaker: "Nira Dookeran" },
       { time: "9:10–9:45 AM", type: "Keynote", room: "Foundry", title: "Keynote", speaker: "John Willis" },
       { time: "10:00–10:30 AM", type: "Sponsor Talk", room: "Foundry", title: "From Agentic Development to Production on OpenShift", speaker: "Nicholas Morey" },
       { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
@@ -852,7 +851,11 @@ const Index = () => {
                     <span className="absolute top-3 right-3 px-1.5 py-0.5 rounded bg-[#FF9900]/20 border border-[#FF9900]/40 text-[#FF9900] font-mono text-[9px] font-bold">AWS</span>
                   )}
                   <div className={`w-20 h-20 rounded-full flex items-center justify-center mb-4 border-2 overflow-hidden transition-smooth ${speaker.aws ? "border-[#FF9900]/40 group-hover:border-[#FF9900] shadow-[0_0_20px_rgba(255,153,0,0.2)]" : "border-accent/50 group-hover:border-accent shadow-[0_0_20px_rgba(146,119,255,0.2)]"}`}>
-                    <img src={speaker.photo} alt={speaker.name} className={`w-full h-full object-cover ${speaker.photoPosition || "object-top"}`} />
+                    {speaker.photo ? (
+                      <img src={speaker.photo} alt={speaker.name} className={`w-full h-full object-cover ${speaker.photoPosition || "object-top"}`} />
+                    ) : (
+                      <span className="text-xl font-bold text-accent">{speaker.name.split(" ").map((name) => name[0]).join("")}</span>
+                    )}
                   </div>
                   <h4 className="font-bold text-lg group-hover:text-accent transition-smooth">{speaker.name}</h4>
                   <p className="text-accent text-xs font-mono mt-0.5">{speaker.role}</p>
