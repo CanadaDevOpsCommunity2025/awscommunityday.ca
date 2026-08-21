@@ -70,6 +70,7 @@ const VOLUNTEER_FORM_URL = "https://forms.gle/YnbVmSmUGpV6PoFq6";
 const SPONSOR_CONTACT_EMAIL = "info@capitalcarbonconsulting.com";
 
 const SPEAKERS = [
+  { name: "Nira Dookeran", role: "Land Acknowledgement", desc: "Opening Day 2 with a Land Acknowledgement before the Community Day program begins.", linkedin: "#agenda", tier: "acknowledgement", aws: false, photo: headshotNira, logo: "", photoPosition: "object-top" },
   { name: "Dr. Mary Gunaratnam", role: "Senior VP & CTO, Northern Credit Union", desc: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity. Explores the AGILE leadership framework for organizations navigating AI transformation.", linkedin: "https://www.linkedin.com/in/dr-marry-gunaratnam-pd-emba-masc-p-eng-pmp-71206528", tier: "speaker", aws: false, photo: headshotMary, logo: logoNorthernCU },
   { name: "Cyril Bandolo", role: "AWS AI Hero, Solutions Architect, Serverless Guru", desc: "Building an AI Control Plane on AWS: From Direct Model Calls to Governed GenAI. How to move from scattered model calls to a governed, observable GenAI architecture.", linkedin: "https://www.linkedin.com/in/cyrilbandolo/", tier: "speaker", aws: true, photo: headshotCyril, logo: logoServerlessGuru },
   { name: "Amar Dhillon", role: "Enterprise Solution Architect, Air Canada", desc: "Agentic AI Design Patterns: Build scalable agentic systems using AWS. AWS SME and community builder.", linkedin: "https://www.linkedin.com/in/amaardhillon", tier: "speaker", aws: true, photo: headshotAmar, logo: logoAirCanada },
@@ -87,16 +88,16 @@ const SPEAKERS = [
   { name: "Alexander Rey", role: "Research Council Officer, National Research Council Canada · Creator, Pirate Weather", desc: "Compute for the Rest of Us: Leveraging AWS as a Civil Engineer. A practical case study in turning engineering ideas into scalable cloud services.", linkedin: "https://ca.linkedin.com/in/alexander-rey", tier: "speaker", aws: true, photo: headshotAlexander, logo: logoGovernmentCanada, logoClass: "w-48 max-w-full object-cover", logoContainerClass: "w-fit rounded-sm bg-white px-2" },
   { name: "Nicholas Morey", role: "Red Hat", desc: "From Agentic Development to Production on OpenShift. Explore spec-driven development with Kiro, secure workspaces in OpenShift Dev Spaces, and scalable deployment on Red Hat OpenShift Service.", linkedin: "https://www.linkedin.com/in/nicholas-morey/", tier: "speaker", aws: false, photo: headshotNicholas, logo: logoRedHat, logoContainerClass: "rounded-sm bg-white px-2" },
   { name: "Albert Zhao", role: "Developer Experience Engineer", desc: "Developer-led Workshop: Strands Agents. Build AI agents with model integration, tool use, conversation memory, and orchestration.", linkedin: "https://www.linkedin.com/in/albert-zhao-49b62a129/", tier: "speaker", aws: true, photo: headshotAlbert, logo: awsLogo },
-  { name: "Nira Dookeran", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: headshotNira, logo: "", photoPosition: "object-[center_38%]" },
+  { name: "Kira Evans", role: "Event Emcee", desc: "Hosting the event's opening program, team formation, and networking sessions.", linkedin: "#agenda", tier: "emcee", aws: false, photo: "", logo: "" },
   { name: "Garima Bajpai", role: "Welcome Note · AWS User Group Ottawa Lead", desc: "DevOps Executive of the Year. Author on Technology Leadership. Bridging DevOps and emerging AI communities.", linkedin: "https://www.linkedin.com/in/garimabajpai", tier: "keynote", aws: true, photo: headshotGarima, logo: awsLogo },
   { name: "Aliza Newman", role: "Closing Remarks · Amazon Web Services", desc: "Closing remarks celebrating community, collaboration, and the builders who made the event possible.", linkedin: "https://www.linkedin.com/in/aliza-newman-295bb211a", tier: "closing", aws: true, photo: headshotAliza, logo: awsLogo, photoPosition: "object-[center_42%]" },
 ];
 
 const DAY_ONE_AGENDA = [
-  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Nira Dookeran + Opening Speaker" },
+  { time: "4:00–4:10 PM", type: "Talk", room: "Foundry", title: "Opening Talk", speaker: "Kira Evans + Opening Speaker" },
   { time: "4:10–4:30 PM", type: "Keynote", room: "Foundry", title: "Leading in the Age of AI: Reframing Leadership, Risk, and Opportunity", speaker: "Dr. Mary Gunaratnam" },
   { time: "4:30–5:00 PM", type: "Talk", room: "Foundry", title: "Building an AI-forward Enterprise Platform Engineering Organization", speaker: "Gautham Pallapa" },
-  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Nira Dookeran" },
+  { time: "5:00–5:50 PM", type: "Networking", room: "Foundry", title: "Coffee Break, Team Formation & Networking", speaker: "Kira Evans" },
   { time: "5:50–6:00 PM", type: "Closing", room: "Foundry", title: "Closing Remarks & Tech2Step Walk", speaker: "Garima Bajpai" },
 ];
 
@@ -105,7 +106,7 @@ const DAY_TWO_TRACKS = [
     room: "Foundry & Big Room",
     items: [
       { time: "Before 9:00 AM", type: "Hospitality", room: "Foundry", title: "Breakfast", speaker: "" },
-      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Opening Remarks", speaker: "Nira Dookeran" },
+      { time: "9:00–9:10 AM", type: "Opening", room: "Foundry", title: "Land Acknowledgement & Opening Remarks", speaker: "Nira Dookeran (Land Acknowledgement) · Kira Evans (Emcee)" },
       { time: "9:10–9:45 AM", type: "Keynote", room: "Foundry", title: "Keynote", speaker: "John Willis" },
       { time: "10:00–10:30 AM", type: "Sponsor Talk", room: "Foundry", title: "From Agentic Development to Production on OpenShift", speaker: "Nicholas Morey" },
       { time: "10:00–10:30 AM", type: "Talk", room: "Big Room", title: "Building an AI Control Plane on AWS", speaker: "Cyril Bandolo" },
@@ -817,6 +818,21 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mt-4">Learn from the best.</h2>
             <p className="text-lg text-muted-foreground mt-4">Industry leaders and community experts sharing real-world insights on AWS, DevOps, and GenAI.</p>
           </div>
+
+          {/* Featured Land Acknowledgement */}
+          {SPEAKERS.filter(s => s.tier === "acknowledgement").map((speaker, i) => (
+            <a key={i} href={speaker.linkedin} className="group mb-12 grid overflow-hidden rounded-2xl border border-accent/40 bg-accent/5 transition-smooth hover:shadow-glow md:grid-cols-[280px_1fr]">
+              <div className="aspect-[4/3] overflow-hidden md:aspect-auto md:min-h-[320px]">
+                <img src={speaker.photo} alt={speaker.name} className={`h-full w-full object-cover ${speaker.photoPosition || "object-top"}`} />
+              </div>
+              <div className="flex flex-col justify-center p-8 md:p-12">
+                <span className="font-mono text-xs uppercase tracking-widest text-accent">Day 2 Opening</span>
+                <h3 className="mt-3 text-3xl font-bold transition-smooth group-hover:text-accent md:text-4xl">{speaker.name}</h3>
+                <p className="mt-2 text-base font-medium text-accent">{speaker.role}</p>
+                <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">{speaker.desc}</p>
+              </div>
+            </a>
+          ))}
 
           {/* All Speakers — equal size */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
